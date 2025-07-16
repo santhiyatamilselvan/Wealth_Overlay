@@ -1,8 +1,9 @@
 {{ config(materialized='view') }}
 
-select
-    id as transaction_id,
+SELECT 
+    transaction_id,
     account_id,
-    amount,
+    transaction_amount,
+    transaction_type,
     transaction_date
-from {{ source('finance', 'transactions') }}
+FROM {{ source('finance', 'transactions') }}
