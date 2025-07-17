@@ -2,3 +2,4 @@ target/
 dbt_packages/
 .venv/
 *.7z
+dbt_internal_packages/

@@ -1,0 +1,1433 @@
+[0m21:39:17.504016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF5DA906E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF5FBB7D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF5FBB7890>]}
+
+
+============================== 21:39:17.608509 | f5b521fd-2807-4e8b-9dfa-87ce4ac7c63d ==============================
+[0m21:39:17.608509 [info ] [MainThread]: Running with dbt=1.10.4
+[0m21:39:17.610300 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:39:17.672407 [info ] [MainThread]: dbt version: 1.10.4
+[0m21:39:17.673801 [info ] [MainThread]: python version: 3.13.3
+[0m21:39:17.674962 [info ] [MainThread]: python path: C:\Users\Nivas Seenivasan\AppData\Local\Programs\Python\Python313\python.exe
+[0m21:39:17.676974 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m21:39:19.334689 [info ] [MainThread]: Using profiles dir at C:\Users\Nivas Seenivasan\.dbt
+[0m21:39:19.335664 [info ] [MainThread]: Using profiles.yml file at C:\Users\Nivas Seenivasan\.dbt\profiles.yml
+[0m21:39:19.336241 [info ] [MainThread]: Using dbt_project.yml file at D:\DBT\wealth_edit_overlay_sample\dbt_project.yml
+[0m21:39:19.338001 [info ] [MainThread]: adapter type: snowflake
+[0m21:39:19.338691 [info ] [MainThread]: adapter version: 1.10.0
+[0m21:39:19.505301 [info ] [MainThread]: Configuration:
+[0m21:39:19.506232 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:39:19.506769 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:39:19.507386 [info ] [MainThread]: Required dependencies:
+[0m21:39:19.508046 [debug] [MainThread]: Executing "git --help"
+[0m21:39:19.551148 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:39:19.551764 [debug] [MainThread]: STDERR: "b''"
+[0m21:39:19.552156 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:39:19.552927 [info ] [MainThread]: Connection:
+[0m21:39:19.553596 [info ] [MainThread]:   account: cspiaiz-zo06948
+[0m21:39:19.554378 [info ] [MainThread]:   user: SANTHIYANIVAS
+[0m21:39:19.555073 [info ] [MainThread]:   database: overlay_db
+[0m21:39:19.555920 [info ] [MainThread]:   warehouse: overlay_wh
+[0m21:39:19.556520 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m21:39:19.557165 [info ] [MainThread]:   schema: overlay_schema
+[0m21:39:19.557916 [info ] [MainThread]:   authenticator: None
+[0m21:39:19.558749 [info ] [MainThread]:   oauth_client_id: None
+[0m21:39:19.559471 [info ] [MainThread]:   query_tag: None
+[0m21:39:19.560179 [info ] [MainThread]:   client_session_keep_alive: False
+[0m21:39:19.560829 [info ] [MainThread]:   host: None
+[0m21:39:19.561486 [info ] [MainThread]:   port: None
+[0m21:39:19.562133 [info ] [MainThread]:   proxy_host: None
+[0m21:39:19.562784 [info ] [MainThread]:   proxy_port: None
+[0m21:39:19.563428 [info ] [MainThread]:   protocol: None
+[0m21:39:19.564127 [info ] [MainThread]:   connect_retries: 1
+[0m21:39:19.564934 [info ] [MainThread]:   connect_timeout: None
+[0m21:39:19.566245 [info ] [MainThread]:   retry_on_database_errors: False
+[0m21:39:19.567234 [info ] [MainThread]:   retry_all: False
+[0m21:39:19.568213 [info ] [MainThread]:   insecure_mode: False
+[0m21:39:19.568972 [info ] [MainThread]:   reuse_connections: True
+[0m21:39:19.569655 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m21:39:19.570677 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m21:39:20.142679 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m21:39:26.164046 [debug] [MainThread]: Using snowflake connection "debug"
+[0m21:39:26.164844 [debug] [MainThread]: On debug: select 1 as id
+[0m21:39:26.165441 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:39:29.980032 [debug] [MainThread]: SQL status: SUCCESS 1 in 3.814 seconds
+[0m21:39:29.984525 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:39:29.987310 [info ] [MainThread]: [32mAll checks passed![0m
+[0m21:39:29.992210 [debug] [MainThread]: Command `dbt debug` succeeded at 21:39:29.991600 after 12.92 seconds
+[0m21:39:29.993760 [debug] [MainThread]: Connection 'debug' was left open.
+[0m21:39:29.995228 [debug] [MainThread]: On debug: Close
+[0m21:39:30.149859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF60CAD940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF60C8A7B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF60B5C7C0>]}
+[0m21:39:30.151012 [debug] [MainThread]: Flushing usage events
+[0m21:39:31.399746 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:39:39.648621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C3D1FB60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C510FD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C510F9D0>]}
+
+
+============================== 21:39:39.656284 | 5eb6f043-ceb5-4cec-ac1e-4abfe2b75a3d ==============================
+[0m21:39:39.656284 [info ] [MainThread]: Running with dbt=1.10.4
+[0m21:39:39.657588 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt compile', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:39:41.293187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5eb6f043-ceb5-4cec-ac1e-4abfe2b75a3d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C4427A80>]}
+[0m21:39:41.378093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5eb6f043-ceb5-4cec-ac1e-4abfe2b75a3d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C6FE1150>]}
+[0m21:39:41.379749 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m21:39:41.784085 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m21:39:41.786121 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:39:41.787290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '5eb6f043-ceb5-4cec-ac1e-4abfe2b75a3d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C6F52350>]}
+[0m21:39:45.776647 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.wealth_overlay.stg_transactions' (models\staging\stg_transactions.sql) depends on a source named 'finance.transactions' which was not found
+[0m21:39:45.778434 [debug] [MainThread]: Command `dbt compile` failed at 21:39:45.778249 after 6.27 seconds
+[0m21:39:45.778834 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C73CA7B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C73CAD50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197C50EBE70>]}
+[0m21:39:45.779217 [debug] [MainThread]: Flushing usage events
+[0m21:39:47.268591 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:59:50.034892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023155C0FB60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023157013D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000231570139D0>]}
+
+
+============================== 21:59:50.052184 | 31730106-8455-4f2e-9631-61914fe1af87 ==============================
+[0m21:59:50.052184 [info ] [MainThread]: Running with dbt=1.10.4
+[0m21:59:50.055027 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt compile', 'send_anonymous_usage_stats': 'True'}
+[0m21:59:50.979816 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '31730106-8455-4f2e-9631-61914fe1af87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023156323A80>]}
+[0m21:59:51.072336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '31730106-8455-4f2e-9631-61914fe1af87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023158F01150>]}
+[0m21:59:51.074231 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m21:59:51.460630 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m21:59:51.461790 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:59:51.462488 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '31730106-8455-4f2e-9631-61914fe1af87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023158E6A350>]}
+[0m21:59:52.842755 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.wealth_overlay.stg_transactions' (models\staging\stg_transactions.sql) depends on a source named 'finance.transactions' which was not found
+[0m21:59:52.844469 [debug] [MainThread]: Command `dbt compile` failed at 21:59:52.844326 after 3.23 seconds
+[0m21:59:52.844914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000231592EA7B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000231592EAD50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023156FEBE70>]}
+[0m21:59:52.845333 [debug] [MainThread]: Flushing usage events
+[0m21:59:54.119827 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:00:17.635245 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A6ACA7B60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A6C0B3D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A6C0B39D0>]}
+
+
+============================== 22:00:17.641671 | 1484c0ec-81c2-4a71-8e50-369fe5642b08 ==============================
+[0m22:00:17.641671 [info ] [MainThread]: Running with dbt=1.10.4
+[0m22:00:17.642775 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m22:00:18.420092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1484c0ec-81c2-4a71-8e50-369fe5642b08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A6B3C7A80>]}
+[0m22:00:18.512592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1484c0ec-81c2-4a71-8e50-369fe5642b08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A6DF81150>]}
+[0m22:00:18.514219 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:00:18.951719 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m22:00:18.952718 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m22:00:18.953382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '1484c0ec-81c2-4a71-8e50-369fe5642b08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A6DEF2350>]}
+[0m22:00:20.372454 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wealth_edit_overlay_sample.intermediate
+- models.wealth_edit_overlay_sample.staging
+- models.wealth_edit_overlay_sample.overlay
+[0m22:00:20.414428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1484c0ec-81c2-4a71-8e50-369fe5642b08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A6DF327B0>]}
+[0m22:00:20.545796 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:00:20.550878 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:00:20.692944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1484c0ec-81c2-4a71-8e50-369fe5642b08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A6E8BE6D0>]}
+[0m22:00:20.694147 [info ] [MainThread]: Found 3 models, 1 seed, 1 source, 477 macros
+[0m22:00:20.695295 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1484c0ec-81c2-4a71-8e50-369fe5642b08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A6E81B5F0>]}
+[0m22:00:20.698786 [info ] [MainThread]: 
+[0m22:00:20.699824 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:00:20.700869 [info ] [MainThread]: 
+[0m22:00:20.702579 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:00:20.715046 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db'
+[0m22:00:20.911318 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db"
+[0m22:00:20.911741 [debug] [ThreadPool]: On list_overlay_db: show terse schemas in database overlay_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db"} */
+[0m22:00:20.912069 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:00:21.994133 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.082 seconds
+[0m22:00:21.999089 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db_overlay_schema'
+[0m22:00:22.019382 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db_overlay_schema"
+[0m22:00:22.020278 [debug] [ThreadPool]: On list_overlay_db_overlay_schema: show objects in overlay_db.overlay_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db_overlay_schema"} */;
+[0m22:00:22.020821 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:00:22.493381 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.472 seconds
+[0m22:00:22.501004 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1484c0ec-81c2-4a71-8e50-369fe5642b08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A6E81F950>]}
+[0m22:00:22.644647 [debug] [Thread-1 (]: Began running node model.wealth_overlay.stg_transactions
+[0m22:00:22.646853 [info ] [Thread-1 (]: 1 of 3 START sql view model overlay_schema.stg_transactions .................... [RUN]
+[0m22:00:22.649931 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.wealth_overlay.stg_transactions'
+[0m22:00:22.651528 [debug] [Thread-1 (]: Began compiling node model.wealth_overlay.stg_transactions
+[0m22:00:22.682883 [debug] [Thread-1 (]: Writing injected SQL for node "model.wealth_overlay.stg_transactions"
+[0m22:00:22.689156 [debug] [Thread-1 (]: Began executing node model.wealth_overlay.stg_transactions
+[0m22:00:22.769445 [debug] [Thread-1 (]: Writing runtime sql for node "model.wealth_overlay.stg_transactions"
+[0m22:00:22.772132 [debug] [Thread-1 (]: Using snowflake connection "model.wealth_overlay.stg_transactions"
+[0m22:00:22.772648 [debug] [Thread-1 (]: On model.wealth_overlay.stg_transactions: create or replace   view overlay_db.overlay_schema.stg_transactions
+  
+  
+  
+  
+  as (
+    
+
+select
+    id as transaction_id,
+    account_id,
+    amount,
+    transaction_date
+from overlay_db.RAW_DATA.transactions
+  )
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "node_id": "model.wealth_overlay.stg_transactions"} */;
+[0m22:00:22.773141 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:00:24.574874 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bdbafe-3201-cdf8-000e-7cbe0002119a
+[0m22:00:24.575642 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (02000): SQL compilation error:
+Schema 'OVERLAY_DB.RAW_DATA' does not exist or not authorized.
+[0m22:00:24.628811 [debug] [Thread-1 (]: Database Error in model stg_transactions (models\staging\stg_transactions.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'OVERLAY_DB.RAW_DATA' does not exist or not authorized.
+  compiled code at target\run\wealth_overlay\models\staging\stg_transactions.sql
+[0m22:00:24.633327 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1484c0ec-81c2-4a71-8e50-369fe5642b08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A6FE2E570>]}
+[0m22:00:24.634645 [error] [Thread-1 (]: 1 of 3 ERROR creating sql view model overlay_schema.stg_transactions ........... [[31mERROR[0m in 1.98s]
+[0m22:00:24.636528 [debug] [Thread-1 (]: Finished running node model.wealth_overlay.stg_transactions
+[0m22:00:24.637788 [debug] [Thread-7 (]: Marking all children of 'model.wealth_overlay.stg_transactions' to be skipped because of status 'error'.  Reason: Database Error in model stg_transactions (models\staging\stg_transactions.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'OVERLAY_DB.RAW_DATA' does not exist or not authorized.
+  compiled code at target\run\wealth_overlay\models\staging\stg_transactions.sql.
+[0m22:00:24.640597 [debug] [Thread-2 (]: Began running node model.wealth_overlay.int_transaction_overlay
+[0m22:00:24.641476 [info ] [Thread-2 (]: 2 of 3 SKIP relation overlay_schema.int_transaction_overlay .................... [[33mSKIP[0m]
+[0m22:00:24.642934 [debug] [Thread-2 (]: Finished running node model.wealth_overlay.int_transaction_overlay
+[0m22:00:24.644477 [debug] [Thread-3 (]: Began running node model.wealth_overlay.wealth_edit_overlay
+[0m22:00:24.645510 [info ] [Thread-3 (]: 3 of 3 SKIP relation overlay_schema.wealth_edit_overlay ........................ [[33mSKIP[0m]
+[0m22:00:24.647338 [debug] [Thread-3 (]: Finished running node model.wealth_overlay.wealth_edit_overlay
+[0m22:00:24.650980 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:00:24.651999 [debug] [MainThread]: Connection 'list_overlay_db' was left open.
+[0m22:00:24.652718 [debug] [MainThread]: On list_overlay_db: Close
+[0m22:00:24.816972 [debug] [MainThread]: Connection 'list_overlay_db_overlay_schema' was left open.
+[0m22:00:24.818472 [debug] [MainThread]: On list_overlay_db_overlay_schema: Close
+[0m22:00:25.406135 [debug] [MainThread]: Connection 'model.wealth_overlay.stg_transactions' was left open.
+[0m22:00:25.407664 [debug] [MainThread]: On model.wealth_overlay.stg_transactions: Close
+[0m22:00:25.545715 [info ] [MainThread]: 
+[0m22:00:25.548134 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 4.84 seconds (4.84s).
+[0m22:00:25.552296 [debug] [MainThread]: Command end result
+[0m22:00:25.721820 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:00:25.730566 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:00:25.752671 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\DBT\wealth_edit_overlay_sample\target\run_results.json
+[0m22:00:25.753531 [info ] [MainThread]: 
+[0m22:00:25.754916 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m22:00:25.756242 [info ] [MainThread]: 
+[0m22:00:25.757762 [error] [MainThread]: [31mFailure in model stg_transactions (models\staging\stg_transactions.sql)[0m
+[0m22:00:25.759311 [error] [MainThread]:   Database Error in model stg_transactions (models\staging\stg_transactions.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'OVERLAY_DB.RAW_DATA' does not exist or not authorized.
+  compiled code at target\run\wealth_overlay\models\staging\stg_transactions.sql
+[0m22:00:25.760914 [info ] [MainThread]: 
+[0m22:00:25.762648 [info ] [MainThread]:   compiled code at target\compiled\wealth_overlay\models\staging\stg_transactions.sql
+[0m22:00:25.764205 [info ] [MainThread]: 
+[0m22:00:25.766314 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=2 NO-OP=0 TOTAL=3
+[0m22:00:25.769887 [debug] [MainThread]: Command `dbt run` failed at 22:00:25.769404 after 8.27 seconds
+[0m22:00:25.771058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A6FDC2A30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A6FE95A30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A6E808650>]}
+[0m22:00:25.771992 [debug] [MainThread]: Flushing usage events
+[0m22:00:26.898853 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:02:43.165575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024976B17B60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024977F23D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024977F239D0>]}
+
+
+============================== 22:02:43.184556 | ca654848-e832-4576-8e3a-84976ca38e43 ==============================
+[0m22:02:43.184556 [info ] [MainThread]: Running with dbt=1.10.4
+[0m22:02:43.187626 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt clean', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m22:02:43.368532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ca654848-e832-4576-8e3a-84976ca38e43', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024977247A80>]}
+[0m22:02:43.402624 [debug] [MainThread]: Command `dbt clean` succeeded at 22:02:43.402448 after 0.76 seconds
+[0m22:02:43.403056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024977D67F00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024977D67BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024977DCBC50>]}
+[0m22:02:43.403476 [debug] [MainThread]: Flushing usage events
+[0m22:02:44.702127 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:02:56.309630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000118BDAAFB60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000118BFE73D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000118BFE739D0>]}
+
+
+============================== 22:02:56.331794 | 8f539ec9-7a45-4867-9269-05b768ae2c98 ==============================
+[0m22:02:56.331794 [info ] [MainThread]: Running with dbt=1.10.4
+[0m22:02:56.336274 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m22:02:56.396972 [info ] [MainThread]: dbt version: 1.10.4
+[0m22:02:56.398411 [info ] [MainThread]: python version: 3.13.3
+[0m22:02:56.399670 [info ] [MainThread]: python path: C:\Users\Nivas Seenivasan\AppData\Local\Programs\Python\Python313\python.exe
+[0m22:02:56.400997 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m22:02:57.043214 [info ] [MainThread]: Using profiles dir at C:\Users\Nivas Seenivasan\.dbt
+[0m22:02:57.044043 [info ] [MainThread]: Using profiles.yml file at C:\Users\Nivas Seenivasan\.dbt\profiles.yml
+[0m22:02:57.044625 [info ] [MainThread]: Using dbt_project.yml file at D:\DBT\wealth_edit_overlay_sample\dbt_project.yml
+[0m22:02:57.046123 [info ] [MainThread]: adapter type: snowflake
+[0m22:02:57.046712 [info ] [MainThread]: adapter version: 1.10.0
+[0m22:02:57.163469 [info ] [MainThread]: Configuration:
+[0m22:02:57.164317 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:02:57.165034 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:02:57.165574 [info ] [MainThread]: Required dependencies:
+[0m22:02:57.166161 [debug] [MainThread]: Executing "git --help"
+[0m22:02:57.208041 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:02:57.208697 [debug] [MainThread]: STDERR: "b''"
+[0m22:02:57.209087 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:02:57.209894 [info ] [MainThread]: Connection:
+[0m22:02:57.210521 [info ] [MainThread]:   account: cspiaiz-zo06948
+[0m22:02:57.211165 [info ] [MainThread]:   user: SANTHIYANIVAS
+[0m22:02:57.211875 [info ] [MainThread]:   database: overlay_db
+[0m22:02:57.212503 [info ] [MainThread]:   warehouse: overlay_wh
+[0m22:02:57.213230 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m22:02:57.213857 [info ] [MainThread]:   schema: overlay_schema
+[0m22:02:57.214512 [info ] [MainThread]:   authenticator: None
+[0m22:02:57.215227 [info ] [MainThread]:   oauth_client_id: None
+[0m22:02:57.216530 [info ] [MainThread]:   query_tag: None
+[0m22:02:57.217554 [info ] [MainThread]:   client_session_keep_alive: False
+[0m22:02:57.218292 [info ] [MainThread]:   host: None
+[0m22:02:57.218942 [info ] [MainThread]:   port: None
+[0m22:02:57.219592 [info ] [MainThread]:   proxy_host: None
+[0m22:02:57.220266 [info ] [MainThread]:   proxy_port: None
+[0m22:02:57.220921 [info ] [MainThread]:   protocol: None
+[0m22:02:57.221711 [info ] [MainThread]:   connect_retries: 1
+[0m22:02:57.222608 [info ] [MainThread]:   connect_timeout: None
+[0m22:02:57.223244 [info ] [MainThread]:   retry_on_database_errors: False
+[0m22:02:57.223999 [info ] [MainThread]:   retry_all: False
+[0m22:02:57.224819 [info ] [MainThread]:   insecure_mode: False
+[0m22:02:57.225689 [info ] [MainThread]:   reuse_connections: True
+[0m22:02:57.226585 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m22:02:57.227823 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:02:57.595793 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m22:02:57.675480 [debug] [MainThread]: Using snowflake connection "debug"
+[0m22:02:57.675877 [debug] [MainThread]: On debug: select 1 as id
+[0m22:02:57.676163 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:02:58.413877 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.737 seconds
+[0m22:02:58.417825 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m22:02:58.420623 [info ] [MainThread]: [32mAll checks passed![0m
+[0m22:02:58.425798 [debug] [MainThread]: Command `dbt debug` succeeded at 22:02:58.425202 after 2.35 seconds
+[0m22:02:58.427552 [debug] [MainThread]: Connection 'debug' was left open.
+[0m22:02:58.428926 [debug] [MainThread]: On debug: Close
+[0m22:02:58.564417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000118C125CD60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000118C0FDDC70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000118C101C160>]}
+[0m22:02:58.566180 [debug] [MainThread]: Flushing usage events
+[0m22:02:59.837137 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:03:08.333505 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFF01A7B60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFF15B3D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFF15B39D0>]}
+
+
+============================== 22:03:08.351170 | 34bbcbec-e84b-426c-bfef-a4f95a17ed24 ==============================
+[0m22:03:08.351170 [info ] [MainThread]: Running with dbt=1.10.4
+[0m22:03:08.354232 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt compile', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m22:03:09.184671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '34bbcbec-e84b-426c-bfef-a4f95a17ed24', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFF08C7A80>]}
+[0m22:03:09.247130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '34bbcbec-e84b-426c-bfef-a4f95a17ed24', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFF34C1150>]}
+[0m22:03:09.248814 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:03:09.591253 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m22:03:09.592303 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m22:03:09.592980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '34bbcbec-e84b-426c-bfef-a4f95a17ed24', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFF3426350>]}
+[0m22:03:10.870434 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wealth_edit_overlay_sample.intermediate
+- models.wealth_edit_overlay_sample.staging
+- models.wealth_edit_overlay_sample.overlay
+[0m22:03:10.882231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '34bbcbec-e84b-426c-bfef-a4f95a17ed24', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFF34727B0>]}
+[0m22:03:10.972864 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:03:10.975589 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:03:11.014315 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '34bbcbec-e84b-426c-bfef-a4f95a17ed24', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFF3BF2CF0>]}
+[0m22:03:11.015070 [info ] [MainThread]: Found 3 models, 1 seed, 1 source, 477 macros
+[0m22:03:11.015761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '34bbcbec-e84b-426c-bfef-a4f95a17ed24', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFF3953BA0>]}
+[0m22:03:11.018444 [info ] [MainThread]: 
+[0m22:03:11.019197 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:03:11.019821 [info ] [MainThread]: 
+[0m22:03:11.020656 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:03:11.026588 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db_overlay_schema'
+[0m22:03:11.220360 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db_overlay_schema"
+[0m22:03:11.220764 [debug] [ThreadPool]: On list_overlay_db_overlay_schema: show objects in overlay_db.overlay_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db_overlay_schema"} */;
+[0m22:03:11.221102 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:03:12.146652 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.925 seconds
+[0m22:03:12.153992 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '34bbcbec-e84b-426c-bfef-a4f95a17ed24', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFF3D5AED0>]}
+[0m22:03:12.168770 [debug] [Thread-1 (]: Began running node model.wealth_overlay.stg_transactions
+[0m22:03:12.169920 [debug] [Thread-2 (]: Began running node seed.wealth_overlay.sample_accounts
+[0m22:03:12.171478 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.wealth_overlay.stg_transactions'
+[0m22:03:12.172676 [debug] [Thread-2 (]: Acquiring new snowflake connection 'seed.wealth_overlay.sample_accounts'
+[0m22:03:12.173682 [debug] [Thread-1 (]: Began compiling node model.wealth_overlay.stg_transactions
+[0m22:03:12.174657 [debug] [Thread-2 (]: Began compiling node seed.wealth_overlay.sample_accounts
+[0m22:03:12.199292 [debug] [Thread-1 (]: Writing injected SQL for node "model.wealth_overlay.stg_transactions"
+[0m22:03:12.204846 [debug] [Thread-2 (]: Began executing node seed.wealth_overlay.sample_accounts
+[0m22:03:12.207236 [debug] [Thread-2 (]: Finished running node seed.wealth_overlay.sample_accounts
+[0m22:03:12.210920 [debug] [Thread-1 (]: Began executing node model.wealth_overlay.stg_transactions
+[0m22:03:12.212870 [debug] [Thread-1 (]: Finished running node model.wealth_overlay.stg_transactions
+[0m22:03:12.214808 [debug] [Thread-3 (]: Began running node model.wealth_overlay.int_transaction_overlay
+[0m22:03:12.216363 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.wealth_overlay.int_transaction_overlay'
+[0m22:03:12.217183 [debug] [Thread-3 (]: Began compiling node model.wealth_overlay.int_transaction_overlay
+[0m22:03:12.226015 [debug] [Thread-3 (]: Writing injected SQL for node "model.wealth_overlay.int_transaction_overlay"
+[0m22:03:12.228541 [debug] [Thread-3 (]: Began executing node model.wealth_overlay.int_transaction_overlay
+[0m22:03:12.230992 [debug] [Thread-3 (]: Finished running node model.wealth_overlay.int_transaction_overlay
+[0m22:03:12.233244 [debug] [Thread-4 (]: Began running node model.wealth_overlay.wealth_edit_overlay
+[0m22:03:12.234976 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.wealth_overlay.wealth_edit_overlay'
+[0m22:03:12.236619 [debug] [Thread-4 (]: Began compiling node model.wealth_overlay.wealth_edit_overlay
+[0m22:03:12.249760 [debug] [Thread-4 (]: Writing injected SQL for node "model.wealth_overlay.wealth_edit_overlay"
+[0m22:03:12.253052 [debug] [Thread-4 (]: Began executing node model.wealth_overlay.wealth_edit_overlay
+[0m22:03:12.255563 [debug] [Thread-4 (]: Finished running node model.wealth_overlay.wealth_edit_overlay
+[0m22:03:12.257916 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:03:12.258412 [debug] [MainThread]: Connection 'list_overlay_db_overlay_schema' was left open.
+[0m22:03:12.258872 [debug] [MainThread]: On list_overlay_db_overlay_schema: Close
+[0m22:03:12.417699 [debug] [MainThread]: Connection 'model.wealth_overlay.stg_transactions' was properly closed.
+[0m22:03:12.419594 [debug] [MainThread]: Connection 'seed.wealth_overlay.sample_accounts' was properly closed.
+[0m22:03:12.420774 [debug] [MainThread]: Connection 'model.wealth_overlay.int_transaction_overlay' was properly closed.
+[0m22:03:12.421769 [debug] [MainThread]: Connection 'model.wealth_overlay.wealth_edit_overlay' was properly closed.
+[0m22:03:12.425319 [debug] [MainThread]: Command end result
+[0m22:03:12.468117 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:03:12.472427 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:03:12.489229 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\DBT\wealth_edit_overlay_sample\target\run_results.json
+[0m22:03:12.491066 [debug] [MainThread]: Command `dbt compile` succeeded at 22:03:12.490788 after 4.37 seconds
+[0m22:03:12.491974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFF5315910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFF423CE10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFF423C870>]}
+[0m22:03:12.492706 [debug] [MainThread]: Flushing usage events
+[0m22:03:13.542268 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:03:33.299173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020038897B60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020039CA3D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020039CA39D0>]}
+
+
+============================== 22:03:33.308136 | 20ed370b-e2ba-4b28-b0e9-bf42dca8387a ==============================
+[0m22:03:33.308136 [info ] [MainThread]: Running with dbt=1.10.4
+[0m22:03:33.309694 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m22:03:34.066726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '20ed370b-e2ba-4b28-b0e9-bf42dca8387a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020038FB7A80>]}
+[0m22:03:34.140297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '20ed370b-e2ba-4b28-b0e9-bf42dca8387a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002003BBF1150>]}
+[0m22:03:34.142114 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:03:34.497807 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m22:03:34.705167 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:03:34.705519 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:03:34.710742 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wealth_edit_overlay_sample.intermediate
+- models.wealth_edit_overlay_sample.staging
+- models.wealth_edit_overlay_sample.overlay
+[0m22:03:34.753504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '20ed370b-e2ba-4b28-b0e9-bf42dca8387a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002003C03D450>]}
+[0m22:03:34.862838 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:03:34.867662 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:03:34.990039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '20ed370b-e2ba-4b28-b0e9-bf42dca8387a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020039B26120>]}
+[0m22:03:34.992936 [info ] [MainThread]: Found 3 models, 1 seed, 1 source, 477 macros
+[0m22:03:34.995881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '20ed370b-e2ba-4b28-b0e9-bf42dca8387a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002003BCBE6D0>]}
+[0m22:03:35.004391 [info ] [MainThread]: 
+[0m22:03:35.007067 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:03:35.011067 [info ] [MainThread]: 
+[0m22:03:35.017490 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:03:35.045131 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db'
+[0m22:03:35.199419 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db"
+[0m22:03:35.199830 [debug] [ThreadPool]: On list_overlay_db: show terse schemas in database overlay_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db"} */
+[0m22:03:35.200143 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:03:35.906636 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.706 seconds
+[0m22:03:35.917561 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db_overlay_schema'
+[0m22:03:35.960589 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db_overlay_schema"
+[0m22:03:35.961349 [debug] [ThreadPool]: On list_overlay_db_overlay_schema: show objects in overlay_db.overlay_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db_overlay_schema"} */;
+[0m22:03:35.962015 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:03:36.705848 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.744 seconds
+[0m22:03:36.713015 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '20ed370b-e2ba-4b28-b0e9-bf42dca8387a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002003C54FEE0>]}
+[0m22:03:36.731575 [debug] [Thread-1 (]: Began running node model.wealth_overlay.stg_transactions
+[0m22:03:36.733725 [info ] [Thread-1 (]: 1 of 3 START sql view model overlay_schema.stg_transactions .................... [RUN]
+[0m22:03:36.736816 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.wealth_overlay.stg_transactions'
+[0m22:03:36.738461 [debug] [Thread-1 (]: Began compiling node model.wealth_overlay.stg_transactions
+[0m22:03:36.763406 [debug] [Thread-1 (]: Writing injected SQL for node "model.wealth_overlay.stg_transactions"
+[0m22:03:36.764877 [debug] [Thread-1 (]: Began executing node model.wealth_overlay.stg_transactions
+[0m22:03:36.820901 [debug] [Thread-1 (]: Writing runtime sql for node "model.wealth_overlay.stg_transactions"
+[0m22:03:36.823088 [debug] [Thread-1 (]: Using snowflake connection "model.wealth_overlay.stg_transactions"
+[0m22:03:36.823680 [debug] [Thread-1 (]: On model.wealth_overlay.stg_transactions: create or replace   view overlay_db.overlay_schema.stg_transactions
+  
+  
+  
+  
+  as (
+    
+
+select
+    id as transaction_id,
+    account_id,
+    amount,
+    transaction_date
+from overlay_db.raw_data.transactions
+  )
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "node_id": "model.wealth_overlay.stg_transactions"} */;
+[0m22:03:36.824130 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:03:37.334846 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bdbb01-3201-cdf7-000e-7cbe0001e242
+[0m22:03:37.336627 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 10 at position 4
+invalid identifier 'ID'
+[0m22:03:37.360237 [debug] [Thread-1 (]: Database Error in model stg_transactions (models\staging\stg_transactions.sql)
+  000904 (42000): SQL compilation error: error line 10 at position 4
+  invalid identifier 'ID'
+  compiled code at target\run\wealth_overlay\models\staging\stg_transactions.sql
+[0m22:03:37.365559 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '20ed370b-e2ba-4b28-b0e9-bf42dca8387a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002003C6859D0>]}
+[0m22:03:37.367158 [error] [Thread-1 (]: 1 of 3 ERROR creating sql view model overlay_schema.stg_transactions ........... [[31mERROR[0m in 0.63s]
+[0m22:03:37.369622 [debug] [Thread-1 (]: Finished running node model.wealth_overlay.stg_transactions
+[0m22:03:37.371099 [debug] [Thread-7 (]: Marking all children of 'model.wealth_overlay.stg_transactions' to be skipped because of status 'error'.  Reason: Database Error in model stg_transactions (models\staging\stg_transactions.sql)
+  000904 (42000): SQL compilation error: error line 10 at position 4
+  invalid identifier 'ID'
+  compiled code at target\run\wealth_overlay\models\staging\stg_transactions.sql.
+[0m22:03:37.373877 [debug] [Thread-2 (]: Began running node model.wealth_overlay.int_transaction_overlay
+[0m22:03:37.375088 [info ] [Thread-2 (]: 2 of 3 SKIP relation overlay_schema.int_transaction_overlay .................... [[33mSKIP[0m]
+[0m22:03:37.376738 [debug] [Thread-2 (]: Finished running node model.wealth_overlay.int_transaction_overlay
+[0m22:03:37.378449 [debug] [Thread-3 (]: Began running node model.wealth_overlay.wealth_edit_overlay
+[0m22:03:37.379627 [info ] [Thread-3 (]: 3 of 3 SKIP relation overlay_schema.wealth_edit_overlay ........................ [[33mSKIP[0m]
+[0m22:03:37.381300 [debug] [Thread-3 (]: Finished running node model.wealth_overlay.wealth_edit_overlay
+[0m22:03:37.384618 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:03:37.385554 [debug] [MainThread]: Connection 'list_overlay_db' was left open.
+[0m22:03:37.386265 [debug] [MainThread]: On list_overlay_db: Close
+[0m22:03:37.562631 [debug] [MainThread]: Connection 'list_overlay_db_overlay_schema' was left open.
+[0m22:03:37.564306 [debug] [MainThread]: On list_overlay_db_overlay_schema: Close
+[0m22:03:37.693056 [debug] [MainThread]: Connection 'model.wealth_overlay.stg_transactions' was left open.
+[0m22:03:37.694545 [debug] [MainThread]: On model.wealth_overlay.stg_transactions: Close
+[0m22:03:37.828941 [info ] [MainThread]: 
+[0m22:03:37.831441 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 2.81 seconds (2.81s).
+[0m22:03:37.835774 [debug] [MainThread]: Command end result
+[0m22:03:37.917739 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:03:37.923580 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:03:37.940926 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\DBT\wealth_edit_overlay_sample\target\run_results.json
+[0m22:03:37.941812 [info ] [MainThread]: 
+[0m22:03:37.943261 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m22:03:37.944942 [info ] [MainThread]: 
+[0m22:03:37.946556 [error] [MainThread]: [31mFailure in model stg_transactions (models\staging\stg_transactions.sql)[0m
+[0m22:03:37.948276 [error] [MainThread]:   Database Error in model stg_transactions (models\staging\stg_transactions.sql)
+  000904 (42000): SQL compilation error: error line 10 at position 4
+  invalid identifier 'ID'
+  compiled code at target\run\wealth_overlay\models\staging\stg_transactions.sql
+[0m22:03:37.950348 [info ] [MainThread]: 
+[0m22:03:37.951789 [info ] [MainThread]:   compiled code at target\compiled\wealth_overlay\models\staging\stg_transactions.sql
+[0m22:03:37.953017 [info ] [MainThread]: 
+[0m22:03:37.954450 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=2 NO-OP=0 TOTAL=3
+[0m22:03:37.956606 [debug] [MainThread]: Command `dbt run` failed at 22:03:37.956346 after 4.82 seconds
+[0m22:03:37.957383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002003C6DE8E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002003C5FBB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002003C5FB7F0>]}
+[0m22:03:37.958120 [debug] [MainThread]: Flushing usage events
+[0m22:03:39.180131 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:05:23.676212 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002898958FB60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002898A9A3D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002898A9A39D0>]}
+
+
+============================== 22:05:23.693891 | 832eba40-a291-4f41-900b-dc745738aaee ==============================
+[0m22:05:23.693891 [info ] [MainThread]: Running with dbt=1.10.4
+[0m22:05:23.696954 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt compile', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m22:05:24.681738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '832eba40-a291-4f41-900b-dc745738aaee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028989CB7A80>]}
+[0m22:05:24.746938 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '832eba40-a291-4f41-900b-dc745738aaee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002898C86D150>]}
+[0m22:05:24.748767 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:05:25.096709 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m22:05:25.307293 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:05:25.307934 [debug] [MainThread]: Partial parsing: updated file: wealth_overlay://models\staging\stg_transactions.sql
+[0m22:05:25.559531 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wealth_edit_overlay_sample.staging
+- models.wealth_edit_overlay_sample.overlay
+- models.wealth_edit_overlay_sample.intermediate
+[0m22:05:25.575888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '832eba40-a291-4f41-900b-dc745738aaee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002898CCBDC50>]}
+[0m22:05:25.665880 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:05:25.668308 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:05:25.711888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '832eba40-a291-4f41-900b-dc745738aaee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002898CCC8320>]}
+[0m22:05:25.712651 [info ] [MainThread]: Found 3 models, 1 seed, 1 source, 477 macros
+[0m22:05:25.713742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '832eba40-a291-4f41-900b-dc745738aaee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002898CE91E10>]}
+[0m22:05:25.717468 [info ] [MainThread]: 
+[0m22:05:25.718509 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:05:25.719573 [info ] [MainThread]: 
+[0m22:05:25.721251 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:05:25.729183 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db_overlay_schema'
+[0m22:05:25.912341 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db_overlay_schema"
+[0m22:05:25.912735 [debug] [ThreadPool]: On list_overlay_db_overlay_schema: show objects in overlay_db.overlay_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db_overlay_schema"} */;
+[0m22:05:25.913032 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:05:26.788632 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.875 seconds
+[0m22:05:26.796097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '832eba40-a291-4f41-900b-dc745738aaee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002898D0EF790>]}
+[0m22:05:26.814433 [debug] [Thread-1 (]: Began running node model.wealth_overlay.stg_transactions
+[0m22:05:26.816347 [debug] [Thread-2 (]: Began running node seed.wealth_overlay.sample_accounts
+[0m22:05:26.818546 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.wealth_overlay.stg_transactions'
+[0m22:05:26.820851 [debug] [Thread-2 (]: Acquiring new snowflake connection 'seed.wealth_overlay.sample_accounts'
+[0m22:05:26.822090 [debug] [Thread-1 (]: Began compiling node model.wealth_overlay.stg_transactions
+[0m22:05:26.822948 [debug] [Thread-2 (]: Began compiling node seed.wealth_overlay.sample_accounts
+[0m22:05:26.837415 [debug] [Thread-1 (]: Writing injected SQL for node "model.wealth_overlay.stg_transactions"
+[0m22:05:26.841830 [debug] [Thread-2 (]: Began executing node seed.wealth_overlay.sample_accounts
+[0m22:05:26.843855 [debug] [Thread-2 (]: Finished running node seed.wealth_overlay.sample_accounts
+[0m22:05:26.845357 [debug] [Thread-1 (]: Began executing node model.wealth_overlay.stg_transactions
+[0m22:05:26.846781 [debug] [Thread-1 (]: Finished running node model.wealth_overlay.stg_transactions
+[0m22:05:26.848241 [debug] [Thread-3 (]: Began running node model.wealth_overlay.int_transaction_overlay
+[0m22:05:26.849247 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.wealth_overlay.int_transaction_overlay'
+[0m22:05:26.850043 [debug] [Thread-3 (]: Began compiling node model.wealth_overlay.int_transaction_overlay
+[0m22:05:26.858505 [debug] [Thread-3 (]: Writing injected SQL for node "model.wealth_overlay.int_transaction_overlay"
+[0m22:05:26.862134 [debug] [Thread-3 (]: Began executing node model.wealth_overlay.int_transaction_overlay
+[0m22:05:26.866263 [debug] [Thread-3 (]: Finished running node model.wealth_overlay.int_transaction_overlay
+[0m22:05:26.868974 [debug] [Thread-4 (]: Began running node model.wealth_overlay.wealth_edit_overlay
+[0m22:05:26.871503 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.wealth_overlay.wealth_edit_overlay'
+[0m22:05:26.873694 [debug] [Thread-4 (]: Began compiling node model.wealth_overlay.wealth_edit_overlay
+[0m22:05:26.898460 [debug] [Thread-4 (]: Writing injected SQL for node "model.wealth_overlay.wealth_edit_overlay"
+[0m22:05:26.903368 [debug] [Thread-4 (]: Began executing node model.wealth_overlay.wealth_edit_overlay
+[0m22:05:26.908299 [debug] [Thread-4 (]: Finished running node model.wealth_overlay.wealth_edit_overlay
+[0m22:05:26.913084 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:05:26.914102 [debug] [MainThread]: Connection 'list_overlay_db_overlay_schema' was left open.
+[0m22:05:26.915359 [debug] [MainThread]: On list_overlay_db_overlay_schema: Close
+[0m22:05:27.076259 [debug] [MainThread]: Connection 'model.wealth_overlay.stg_transactions' was properly closed.
+[0m22:05:27.076744 [debug] [MainThread]: Connection 'seed.wealth_overlay.sample_accounts' was properly closed.
+[0m22:05:27.077355 [debug] [MainThread]: Connection 'model.wealth_overlay.int_transaction_overlay' was properly closed.
+[0m22:05:27.077738 [debug] [MainThread]: Connection 'model.wealth_overlay.wealth_edit_overlay' was properly closed.
+[0m22:05:27.079750 [debug] [MainThread]: Command end result
+[0m22:05:27.104770 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:05:27.107487 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:05:27.115790 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\DBT\wealth_edit_overlay_sample\target\run_results.json
+[0m22:05:27.116836 [debug] [MainThread]: Command `dbt compile` succeeded at 22:05:27.116684 after 3.66 seconds
+[0m22:05:27.117326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002898A792ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002898D4BC050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002898D4BEC50>]}
+[0m22:05:27.117865 [debug] [MainThread]: Flushing usage events
+[0m22:05:28.323802 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:05:40.123848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289A452FB60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289A68F3D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289A68F39D0>]}
+
+
+============================== 22:05:40.141267 | 019155e4-bc68-4df4-b2ba-fe6792526922 ==============================
+[0m22:05:40.141267 [info ] [MainThread]: Running with dbt=1.10.4
+[0m22:05:40.144324 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:05:41.073784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '019155e4-bc68-4df4-b2ba-fe6792526922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289A4C37A80>]}
+[0m22:05:41.165645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '019155e4-bc68-4df4-b2ba-fe6792526922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289A784D150>]}
+[0m22:05:41.167514 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:05:41.614300 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m22:05:41.831855 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:05:41.832268 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:05:41.837813 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wealth_edit_overlay_sample.overlay
+- models.wealth_edit_overlay_sample.intermediate
+- models.wealth_edit_overlay_sample.staging
+[0m22:05:41.887583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '019155e4-bc68-4df4-b2ba-fe6792526922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289A7CA1450>]}
+[0m22:05:41.981782 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:05:41.984664 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:05:42.067329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '019155e4-bc68-4df4-b2ba-fe6792526922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289A57A6120>]}
+[0m22:05:42.070050 [info ] [MainThread]: Found 3 models, 1 seed, 1 source, 477 macros
+[0m22:05:42.072763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '019155e4-bc68-4df4-b2ba-fe6792526922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289A791E6D0>]}
+[0m22:05:42.079687 [info ] [MainThread]: 
+[0m22:05:42.081763 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:05:42.084979 [info ] [MainThread]: 
+[0m22:05:42.088177 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:05:42.113561 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db'
+[0m22:05:42.310746 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db"
+[0m22:05:42.311166 [debug] [ThreadPool]: On list_overlay_db: show terse schemas in database overlay_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db"} */
+[0m22:05:42.311478 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:05:43.153424 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.841 seconds
+[0m22:05:43.166024 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db_overlay_schema'
+[0m22:05:43.217223 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db_overlay_schema"
+[0m22:05:43.218260 [debug] [ThreadPool]: On list_overlay_db_overlay_schema: show objects in overlay_db.overlay_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db_overlay_schema"} */;
+[0m22:05:43.219020 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:05:43.772541 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.553 seconds
+[0m22:05:43.781163 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '019155e4-bc68-4df4-b2ba-fe6792526922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289A81AFEE0>]}
+[0m22:05:43.805226 [debug] [Thread-1 (]: Began running node model.wealth_overlay.stg_transactions
+[0m22:05:43.807715 [info ] [Thread-1 (]: 1 of 3 START sql view model overlay_schema.stg_transactions .................... [RUN]
+[0m22:05:43.811327 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.wealth_overlay.stg_transactions'
+[0m22:05:43.813142 [debug] [Thread-1 (]: Began compiling node model.wealth_overlay.stg_transactions
+[0m22:05:43.844409 [debug] [Thread-1 (]: Writing injected SQL for node "model.wealth_overlay.stg_transactions"
+[0m22:05:43.847427 [debug] [Thread-1 (]: Began executing node model.wealth_overlay.stg_transactions
+[0m22:05:43.920579 [debug] [Thread-1 (]: Writing runtime sql for node "model.wealth_overlay.stg_transactions"
+[0m22:05:43.921995 [debug] [Thread-1 (]: Using snowflake connection "model.wealth_overlay.stg_transactions"
+[0m22:05:43.922486 [debug] [Thread-1 (]: On model.wealth_overlay.stg_transactions: create or replace   view overlay_db.overlay_schema.stg_transactions
+  
+  
+  
+  
+  as (
+    
+
+SELECT 
+    transaction_id,
+    account_id,
+    transaction_amount,
+    transaction_type,
+    transaction_date
+FROM overlay_db.raw_data.transactions
+  )
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "node_id": "model.wealth_overlay.stg_transactions"} */;
+[0m22:05:43.922942 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:05:44.618043 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.694 seconds
+[0m22:05:44.685830 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '019155e4-bc68-4df4-b2ba-fe6792526922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289A82E9F10>]}
+[0m22:05:44.687224 [info ] [Thread-1 (]: 1 of 3 OK created sql view model overlay_schema.stg_transactions ............... [[32mSUCCESS 1[0m in 0.87s]
+[0m22:05:44.688950 [debug] [Thread-1 (]: Finished running node model.wealth_overlay.stg_transactions
+[0m22:05:44.690296 [debug] [Thread-2 (]: Began running node model.wealth_overlay.int_transaction_overlay
+[0m22:05:44.691189 [info ] [Thread-2 (]: 2 of 3 START sql view model overlay_schema.int_transaction_overlay ............. [RUN]
+[0m22:05:44.692584 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.wealth_overlay.int_transaction_overlay'
+[0m22:05:44.693240 [debug] [Thread-2 (]: Began compiling node model.wealth_overlay.int_transaction_overlay
+[0m22:05:44.698622 [debug] [Thread-2 (]: Writing injected SQL for node "model.wealth_overlay.int_transaction_overlay"
+[0m22:05:44.699708 [debug] [Thread-2 (]: Began executing node model.wealth_overlay.int_transaction_overlay
+[0m22:05:44.702845 [debug] [Thread-2 (]: Writing runtime sql for node "model.wealth_overlay.int_transaction_overlay"
+[0m22:05:44.813923 [debug] [Thread-2 (]: Using snowflake connection "model.wealth_overlay.int_transaction_overlay"
+[0m22:05:44.816446 [debug] [Thread-2 (]: On model.wealth_overlay.int_transaction_overlay: create or replace   view overlay_db.overlay_schema.int_transaction_overlay
+  
+  
+  
+  
+  as (
+    
+
+select
+    transaction_id,
+    account_id,
+    amount,
+    transaction_date,
+    case when amount > 100000 then 'HIGH_VALUE' else 'NORMAL' end as transaction_type
+from overlay_db.overlay_schema.stg_transactions
+  )
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "node_id": "model.wealth_overlay.int_transaction_overlay"} */;
+[0m22:05:44.818268 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:05:45.360471 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01bdbb03-3201-cdf7-000e-7cbe0001e252
+[0m22:05:45.363763 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 12 at position 4
+invalid identifier 'AMOUNT'
+[0m22:05:45.390869 [debug] [Thread-2 (]: Database Error in model int_transaction_overlay (models\intermediate\int_transaction_overlay.sql)
+  000904 (42000): SQL compilation error: error line 12 at position 4
+  invalid identifier 'AMOUNT'
+  compiled code at target\run\wealth_overlay\models\intermediate\int_transaction_overlay.sql
+[0m22:05:45.392102 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '019155e4-bc68-4df4-b2ba-fe6792526922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289A8342A40>]}
+[0m22:05:45.393612 [error] [Thread-2 (]: 2 of 3 ERROR creating sql view model overlay_schema.int_transaction_overlay .... [[31mERROR[0m in 0.70s]
+[0m22:05:45.395849 [debug] [Thread-2 (]: Finished running node model.wealth_overlay.int_transaction_overlay
+[0m22:05:45.397446 [debug] [Thread-7 (]: Marking all children of 'model.wealth_overlay.int_transaction_overlay' to be skipped because of status 'error'.  Reason: Database Error in model int_transaction_overlay (models\intermediate\int_transaction_overlay.sql)
+  000904 (42000): SQL compilation error: error line 12 at position 4
+  invalid identifier 'AMOUNT'
+  compiled code at target\run\wealth_overlay\models\intermediate\int_transaction_overlay.sql.
+[0m22:05:45.400448 [debug] [Thread-3 (]: Began running node model.wealth_overlay.wealth_edit_overlay
+[0m22:05:45.401794 [info ] [Thread-3 (]: 3 of 3 SKIP relation overlay_schema.wealth_edit_overlay ........................ [[33mSKIP[0m]
+[0m22:05:45.404405 [debug] [Thread-3 (]: Finished running node model.wealth_overlay.wealth_edit_overlay
+[0m22:05:45.408334 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:05:45.409337 [debug] [MainThread]: Connection 'list_overlay_db' was left open.
+[0m22:05:45.410097 [debug] [MainThread]: On list_overlay_db: Close
+[0m22:05:45.562204 [debug] [MainThread]: Connection 'list_overlay_db_overlay_schema' was left open.
+[0m22:05:45.563657 [debug] [MainThread]: On list_overlay_db_overlay_schema: Close
+[0m22:05:45.727784 [debug] [MainThread]: Connection 'model.wealth_overlay.stg_transactions' was left open.
+[0m22:05:45.729238 [debug] [MainThread]: On model.wealth_overlay.stg_transactions: Close
+[0m22:05:45.887048 [debug] [MainThread]: Connection 'model.wealth_overlay.int_transaction_overlay' was left open.
+[0m22:05:45.888557 [debug] [MainThread]: On model.wealth_overlay.int_transaction_overlay: Close
+[0m22:05:46.042620 [info ] [MainThread]: 
+[0m22:05:46.044627 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 3.96 seconds (3.96s).
+[0m22:05:46.049704 [debug] [MainThread]: Command end result
+[0m22:05:46.120044 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:05:46.124981 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:05:46.138023 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\DBT\wealth_edit_overlay_sample\target\run_results.json
+[0m22:05:46.138735 [info ] [MainThread]: 
+[0m22:05:46.139835 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m22:05:46.140820 [info ] [MainThread]: 
+[0m22:05:46.141858 [error] [MainThread]: [31mFailure in model int_transaction_overlay (models\intermediate\int_transaction_overlay.sql)[0m
+[0m22:05:46.143080 [error] [MainThread]:   Database Error in model int_transaction_overlay (models\intermediate\int_transaction_overlay.sql)
+  000904 (42000): SQL compilation error: error line 12 at position 4
+  invalid identifier 'AMOUNT'
+  compiled code at target\run\wealth_overlay\models\intermediate\int_transaction_overlay.sql
+[0m22:05:46.144213 [info ] [MainThread]: 
+[0m22:05:46.145383 [info ] [MainThread]:   compiled code at target\compiled\wealth_overlay\models\intermediate\int_transaction_overlay.sql
+[0m22:05:46.146269 [info ] [MainThread]: 
+[0m22:05:46.147148 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=1 NO-OP=0 TOTAL=3
+[0m22:05:46.148943 [debug] [MainThread]: Command `dbt run` failed at 22:05:46.148724 after 6.22 seconds
+[0m22:05:46.149591 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289A825BB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289A84622A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289A7C87C50>]}
+[0m22:05:46.150202 [debug] [MainThread]: Flushing usage events
+[0m22:05:47.280844 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:07:28.904315 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D65F9FB60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D68383D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D683839D0>]}
+
+
+============================== 22:07:28.921790 | 51045a24-7374-41ad-b065-51c6ce06bcbd ==============================
+[0m22:07:28.921790 [info ] [MainThread]: Running with dbt=1.10.4
+[0m22:07:28.924782 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt compile', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m22:07:29.738247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '51045a24-7374-41ad-b065-51c6ce06bcbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D666C7A80>]}
+[0m22:07:29.803647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '51045a24-7374-41ad-b065-51c6ce06bcbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D6927D150>]}
+[0m22:07:29.805497 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:07:30.157511 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m22:07:30.362840 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m22:07:30.363423 [debug] [MainThread]: Partial parsing: updated file: wealth_overlay://models\intermediate\int_transaction_overlay.sql
+[0m22:07:30.363826 [debug] [MainThread]: Partial parsing: updated file: wealth_overlay://models\overlay\wealth_edit_overlay.sql
+[0m22:07:30.629558 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wealth_edit_overlay_sample.intermediate
+- models.wealth_edit_overlay_sample.staging
+- models.wealth_edit_overlay_sample.overlay
+[0m22:07:30.643758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '51045a24-7374-41ad-b065-51c6ce06bcbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D696D1C50>]}
+[0m22:07:30.754170 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:07:30.756530 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:07:30.791618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '51045a24-7374-41ad-b065-51c6ce06bcbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D696C4410>]}
+[0m22:07:30.792185 [info ] [MainThread]: Found 1 seed, 3 models, 1 source, 477 macros
+[0m22:07:30.793050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '51045a24-7374-41ad-b065-51c6ce06bcbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D69871E10>]}
+[0m22:07:30.795840 [info ] [MainThread]: 
+[0m22:07:30.796599 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:07:30.797198 [info ] [MainThread]: 
+[0m22:07:30.798015 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:07:30.803941 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db_overlay_schema'
+[0m22:07:30.969350 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db_overlay_schema"
+[0m22:07:30.969762 [debug] [ThreadPool]: On list_overlay_db_overlay_schema: show objects in overlay_db.overlay_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db_overlay_schema"} */;
+[0m22:07:30.970071 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:07:32.029858 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.059 seconds
+[0m22:07:32.045090 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '51045a24-7374-41ad-b065-51c6ce06bcbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D69AFB860>]}
+[0m22:07:32.059507 [debug] [Thread-2 (]: Began running node seed.wealth_overlay.sample_accounts
+[0m22:07:32.061461 [debug] [Thread-1 (]: Began running node model.wealth_overlay.stg_transactions
+[0m22:07:32.063494 [debug] [Thread-2 (]: Acquiring new snowflake connection 'seed.wealth_overlay.sample_accounts'
+[0m22:07:32.065428 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.wealth_overlay.stg_transactions'
+[0m22:07:32.067093 [debug] [Thread-2 (]: Began compiling node seed.wealth_overlay.sample_accounts
+[0m22:07:32.068869 [debug] [Thread-1 (]: Began compiling node model.wealth_overlay.stg_transactions
+[0m22:07:32.091732 [debug] [Thread-2 (]: Began executing node seed.wealth_overlay.sample_accounts
+[0m22:07:32.101434 [debug] [Thread-1 (]: Writing injected SQL for node "model.wealth_overlay.stg_transactions"
+[0m22:07:32.103143 [debug] [Thread-2 (]: Finished running node seed.wealth_overlay.sample_accounts
+[0m22:07:32.104628 [debug] [Thread-1 (]: Began executing node model.wealth_overlay.stg_transactions
+[0m22:07:32.105930 [debug] [Thread-1 (]: Finished running node model.wealth_overlay.stg_transactions
+[0m22:07:32.107140 [debug] [Thread-3 (]: Began running node model.wealth_overlay.int_transaction_overlay
+[0m22:07:32.108016 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.wealth_overlay.int_transaction_overlay'
+[0m22:07:32.108704 [debug] [Thread-3 (]: Began compiling node model.wealth_overlay.int_transaction_overlay
+[0m22:07:32.114631 [debug] [Thread-3 (]: Writing injected SQL for node "model.wealth_overlay.int_transaction_overlay"
+[0m22:07:32.116091 [debug] [Thread-3 (]: Began executing node model.wealth_overlay.int_transaction_overlay
+[0m22:07:32.117308 [debug] [Thread-3 (]: Finished running node model.wealth_overlay.int_transaction_overlay
+[0m22:07:32.118320 [debug] [Thread-4 (]: Began running node model.wealth_overlay.wealth_edit_overlay
+[0m22:07:32.119093 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.wealth_overlay.wealth_edit_overlay'
+[0m22:07:32.119723 [debug] [Thread-4 (]: Began compiling node model.wealth_overlay.wealth_edit_overlay
+[0m22:07:32.125089 [debug] [Thread-4 (]: Writing injected SQL for node "model.wealth_overlay.wealth_edit_overlay"
+[0m22:07:32.126626 [debug] [Thread-4 (]: Began executing node model.wealth_overlay.wealth_edit_overlay
+[0m22:07:32.128180 [debug] [Thread-4 (]: Finished running node model.wealth_overlay.wealth_edit_overlay
+[0m22:07:32.130208 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:07:32.130913 [debug] [MainThread]: Connection 'list_overlay_db_overlay_schema' was left open.
+[0m22:07:32.131379 [debug] [MainThread]: On list_overlay_db_overlay_schema: Close
+[0m22:07:32.408275 [debug] [MainThread]: Connection 'seed.wealth_overlay.sample_accounts' was properly closed.
+[0m22:07:32.409119 [debug] [MainThread]: Connection 'model.wealth_overlay.stg_transactions' was properly closed.
+[0m22:07:32.409791 [debug] [MainThread]: Connection 'model.wealth_overlay.int_transaction_overlay' was properly closed.
+[0m22:07:32.410447 [debug] [MainThread]: Connection 'model.wealth_overlay.wealth_edit_overlay' was properly closed.
+[0m22:07:32.413141 [debug] [MainThread]: Command end result
+[0m22:07:32.469197 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:07:32.473924 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:07:32.489113 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\DBT\wealth_edit_overlay_sample\target\run_results.json
+[0m22:07:32.490990 [debug] [MainThread]: Command `dbt compile` succeeded at 22:07:32.490714 after 3.79 seconds
+[0m22:07:32.491813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D671A2ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D69ECED00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D69ECEBA0>]}
+[0m22:07:32.492625 [debug] [MainThread]: Flushing usage events
+[0m22:07:34.046064 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:07:40.920424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAFC9A7B60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAFDDABD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAFDDAB9D0>]}
+
+
+============================== 22:07:40.936204 | db148b68-2aa5-4b8c-b893-c5d2bd10de0a ==============================
+[0m22:07:40.936204 [info ] [MainThread]: Running with dbt=1.10.4
+[0m22:07:40.938924 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m22:07:41.825909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'db148b68-2aa5-4b8c-b893-c5d2bd10de0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAFD0C7A80>]}
+[0m22:07:41.887634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'db148b68-2aa5-4b8c-b893-c5d2bd10de0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAFFC8D150>]}
+[0m22:07:41.889206 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:07:42.237054 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m22:07:42.444088 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:07:42.444453 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:07:42.449634 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wealth_edit_overlay_sample.staging
+- models.wealth_edit_overlay_sample.overlay
+- models.wealth_edit_overlay_sample.intermediate
+[0m22:07:42.497477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'db148b68-2aa5-4b8c-b893-c5d2bd10de0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CA80190850>]}
+[0m22:07:42.579513 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:07:42.582352 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:07:42.636541 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'db148b68-2aa5-4b8c-b893-c5d2bd10de0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAFDC36120>]}
+[0m22:07:42.637301 [info ] [MainThread]: Found 1 seed, 3 models, 1 source, 477 macros
+[0m22:07:42.638312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'db148b68-2aa5-4b8c-b893-c5d2bd10de0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAFFD5E6D0>]}
+[0m22:07:42.641668 [info ] [MainThread]: 
+[0m22:07:42.642817 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:07:42.644083 [info ] [MainThread]: 
+[0m22:07:42.645912 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:07:42.658419 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db'
+[0m22:07:42.852063 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db"
+[0m22:07:42.852448 [debug] [ThreadPool]: On list_overlay_db: show terse schemas in database overlay_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db"} */
+[0m22:07:42.852806 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:07:43.733587 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.881 seconds
+[0m22:07:43.743985 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db_overlay_schema'
+[0m22:07:43.777143 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db_overlay_schema"
+[0m22:07:43.777925 [debug] [ThreadPool]: On list_overlay_db_overlay_schema: show objects in overlay_db.overlay_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db_overlay_schema"} */;
+[0m22:07:43.778807 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:07:44.353239 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.574 seconds
+[0m22:07:44.362232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'db148b68-2aa5-4b8c-b893-c5d2bd10de0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CA8069FEE0>]}
+[0m22:07:44.381164 [debug] [Thread-1 (]: Began running node model.wealth_overlay.stg_transactions
+[0m22:07:44.383370 [info ] [Thread-1 (]: 1 of 3 START sql view model overlay_schema.stg_transactions .................... [RUN]
+[0m22:07:44.386493 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.wealth_overlay.stg_transactions'
+[0m22:07:44.388094 [debug] [Thread-1 (]: Began compiling node model.wealth_overlay.stg_transactions
+[0m22:07:44.419485 [debug] [Thread-1 (]: Writing injected SQL for node "model.wealth_overlay.stg_transactions"
+[0m22:07:44.422323 [debug] [Thread-1 (]: Began executing node model.wealth_overlay.stg_transactions
+[0m22:07:44.514842 [debug] [Thread-1 (]: Writing runtime sql for node "model.wealth_overlay.stg_transactions"
+[0m22:07:44.516560 [debug] [Thread-1 (]: Using snowflake connection "model.wealth_overlay.stg_transactions"
+[0m22:07:44.517030 [debug] [Thread-1 (]: On model.wealth_overlay.stg_transactions: create or replace   view overlay_db.overlay_schema.stg_transactions
+  
+  
+  
+  
+  as (
+    
+
+SELECT 
+    transaction_id,
+    account_id,
+    transaction_amount,
+    transaction_type,
+    transaction_date
+FROM overlay_db.raw_data.transactions
+  )
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "node_id": "model.wealth_overlay.stg_transactions"} */;
+[0m22:07:44.517478 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:07:45.136840 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.619 seconds
+[0m22:07:45.195343 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'db148b68-2aa5-4b8c-b893-c5d2bd10de0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CA807D9F10>]}
+[0m22:07:45.196225 [info ] [Thread-1 (]: 1 of 3 OK created sql view model overlay_schema.stg_transactions ............... [[32mSUCCESS 1[0m in 0.81s]
+[0m22:07:45.197394 [debug] [Thread-1 (]: Finished running node model.wealth_overlay.stg_transactions
+[0m22:07:45.198452 [debug] [Thread-2 (]: Began running node model.wealth_overlay.int_transaction_overlay
+[0m22:07:45.199015 [info ] [Thread-2 (]: 2 of 3 START sql view model overlay_schema.int_transaction_overlay ............. [RUN]
+[0m22:07:45.199962 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.wealth_overlay.int_transaction_overlay'
+[0m22:07:45.200465 [debug] [Thread-2 (]: Began compiling node model.wealth_overlay.int_transaction_overlay
+[0m22:07:45.204351 [debug] [Thread-2 (]: Writing injected SQL for node "model.wealth_overlay.int_transaction_overlay"
+[0m22:07:45.205349 [debug] [Thread-2 (]: Began executing node model.wealth_overlay.int_transaction_overlay
+[0m22:07:45.208234 [debug] [Thread-2 (]: Writing runtime sql for node "model.wealth_overlay.int_transaction_overlay"
+[0m22:07:45.209545 [debug] [Thread-2 (]: Using snowflake connection "model.wealth_overlay.int_transaction_overlay"
+[0m22:07:45.210094 [debug] [Thread-2 (]: On model.wealth_overlay.int_transaction_overlay: create or replace   view overlay_db.overlay_schema.int_transaction_overlay
+  
+  
+  
+  
+  as (
+    
+
+select
+    transaction_id,
+    account_id,
+    transaction_amount,
+    transaction_date,
+    case when amount > 100000 then 'HIGH_VALUE' else 'NORMAL' end as transaction_type
+from overlay_db.overlay_schema.stg_transactions
+  )
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "node_id": "model.wealth_overlay.int_transaction_overlay"} */;
+[0m22:07:45.210548 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:07:45.715746 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01bdbb05-3201-cdf7-000e-7cbe0001e25e
+[0m22:07:45.717489 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 14 at position 14
+invalid identifier 'AMOUNT'
+[0m22:07:45.744330 [debug] [Thread-2 (]: Database Error in model int_transaction_overlay (models\intermediate\int_transaction_overlay.sql)
+  000904 (42000): SQL compilation error: error line 14 at position 14
+  invalid identifier 'AMOUNT'
+  compiled code at target\run\wealth_overlay\models\intermediate\int_transaction_overlay.sql
+[0m22:07:45.746028 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'db148b68-2aa5-4b8c-b893-c5d2bd10de0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CA8082EAF0>]}
+[0m22:07:45.748211 [error] [Thread-2 (]: 2 of 3 ERROR creating sql view model overlay_schema.int_transaction_overlay .... [[31mERROR[0m in 0.55s]
+[0m22:07:45.750684 [debug] [Thread-2 (]: Finished running node model.wealth_overlay.int_transaction_overlay
+[0m22:07:45.752138 [debug] [Thread-7 (]: Marking all children of 'model.wealth_overlay.int_transaction_overlay' to be skipped because of status 'error'.  Reason: Database Error in model int_transaction_overlay (models\intermediate\int_transaction_overlay.sql)
+  000904 (42000): SQL compilation error: error line 14 at position 14
+  invalid identifier 'AMOUNT'
+  compiled code at target\run\wealth_overlay\models\intermediate\int_transaction_overlay.sql.
+[0m22:07:45.754705 [debug] [Thread-3 (]: Began running node model.wealth_overlay.wealth_edit_overlay
+[0m22:07:45.755609 [info ] [Thread-3 (]: 3 of 3 SKIP relation overlay_schema.wealth_edit_overlay ........................ [[33mSKIP[0m]
+[0m22:07:45.757017 [debug] [Thread-3 (]: Finished running node model.wealth_overlay.wealth_edit_overlay
+[0m22:07:45.760401 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:07:45.761399 [debug] [MainThread]: Connection 'list_overlay_db' was left open.
+[0m22:07:45.762113 [debug] [MainThread]: On list_overlay_db: Close
+[0m22:07:45.931344 [debug] [MainThread]: Connection 'list_overlay_db_overlay_schema' was left open.
+[0m22:07:45.932807 [debug] [MainThread]: On list_overlay_db_overlay_schema: Close
+[0m22:07:46.083606 [debug] [MainThread]: Connection 'model.wealth_overlay.stg_transactions' was left open.
+[0m22:07:46.085110 [debug] [MainThread]: On model.wealth_overlay.stg_transactions: Close
+[0m22:07:46.239105 [debug] [MainThread]: Connection 'model.wealth_overlay.int_transaction_overlay' was left open.
+[0m22:07:46.240639 [debug] [MainThread]: On model.wealth_overlay.int_transaction_overlay: Close
+[0m22:07:46.373975 [info ] [MainThread]: 
+[0m22:07:46.376407 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 3.73 seconds (3.73s).
+[0m22:07:46.381225 [debug] [MainThread]: Command end result
+[0m22:07:46.444552 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:07:46.448359 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:07:46.456167 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\DBT\wealth_edit_overlay_sample\target\run_results.json
+[0m22:07:46.456689 [info ] [MainThread]: 
+[0m22:07:46.457520 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m22:07:46.458272 [info ] [MainThread]: 
+[0m22:07:46.459151 [error] [MainThread]: [31mFailure in model int_transaction_overlay (models\intermediate\int_transaction_overlay.sql)[0m
+[0m22:07:46.460049 [error] [MainThread]:   Database Error in model int_transaction_overlay (models\intermediate\int_transaction_overlay.sql)
+  000904 (42000): SQL compilation error: error line 14 at position 14
+  invalid identifier 'AMOUNT'
+  compiled code at target\run\wealth_overlay\models\intermediate\int_transaction_overlay.sql
+[0m22:07:46.460930 [info ] [MainThread]: 
+[0m22:07:46.461830 [info ] [MainThread]:   compiled code at target\compiled\wealth_overlay\models\intermediate\int_transaction_overlay.sql
+[0m22:07:46.563137 [info ] [MainThread]: 
+[0m22:07:46.565392 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=1 NO-OP=0 TOTAL=3
+[0m22:07:46.569436 [debug] [MainThread]: Command `dbt run` failed at 22:07:46.568945 after 5.79 seconds
+[0m22:07:46.570994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CA8074BB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CA8091A330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CA80177C50>]}
+[0m22:07:46.572497 [debug] [MainThread]: Flushing usage events
+[0m22:07:47.801775 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:08:48.875950 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002172B5C3B60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002172C9D3D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002172C9D39D0>]}
+
+
+============================== 22:08:48.893455 | e5c59b7c-d50e-4d51-be08-4b7e5f0cdb37 ==============================
+[0m22:08:48.893455 [info ] [MainThread]: Running with dbt=1.10.4
+[0m22:08:48.896452 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt compile', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:08:49.737860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e5c59b7c-d50e-4d51-be08-4b7e5f0cdb37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002172BCE7A80>]}
+[0m22:08:49.800070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e5c59b7c-d50e-4d51-be08-4b7e5f0cdb37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002172E89D150>]}
+[0m22:08:49.801824 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:08:50.155879 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m22:08:50.338663 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:08:50.339215 [debug] [MainThread]: Partial parsing: updated file: wealth_overlay://models\intermediate\int_transaction_overlay.sql
+[0m22:08:50.597843 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wealth_edit_overlay_sample.staging
+- models.wealth_edit_overlay_sample.intermediate
+- models.wealth_edit_overlay_sample.overlay
+[0m22:08:50.613668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e5c59b7c-d50e-4d51-be08-4b7e5f0cdb37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002172ECF1C50>]}
+[0m22:08:50.699138 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:08:50.701605 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:08:50.741177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e5c59b7c-d50e-4d51-be08-4b7e5f0cdb37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002172ECE4410>]}
+[0m22:08:50.741784 [info ] [MainThread]: Found 1 seed, 3 models, 1 source, 477 macros
+[0m22:08:50.742675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e5c59b7c-d50e-4d51-be08-4b7e5f0cdb37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002172EEC9E10>]}
+[0m22:08:50.745842 [info ] [MainThread]: 
+[0m22:08:50.746761 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:08:50.747494 [info ] [MainThread]: 
+[0m22:08:50.748562 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:08:50.771384 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db_overlay_schema'
+[0m22:08:50.943808 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db_overlay_schema"
+[0m22:08:50.944215 [debug] [ThreadPool]: On list_overlay_db_overlay_schema: show objects in overlay_db.overlay_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db_overlay_schema"} */;
+[0m22:08:50.944521 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:08:51.834268 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.889 seconds
+[0m22:08:51.843330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e5c59b7c-d50e-4d51-be08-4b7e5f0cdb37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002172F11F790>]}
+[0m22:08:51.860642 [debug] [Thread-1 (]: Began running node model.wealth_overlay.stg_transactions
+[0m22:08:51.861780 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.wealth_overlay.stg_transactions'
+[0m22:08:51.862580 [debug] [Thread-1 (]: Began compiling node model.wealth_overlay.stg_transactions
+[0m22:08:51.877562 [debug] [Thread-1 (]: Writing injected SQL for node "model.wealth_overlay.stg_transactions"
+[0m22:08:51.878656 [debug] [Thread-2 (]: Began running node seed.wealth_overlay.sample_accounts
+[0m22:08:51.879740 [debug] [Thread-2 (]: Acquiring new snowflake connection 'seed.wealth_overlay.sample_accounts'
+[0m22:08:51.881083 [debug] [Thread-2 (]: Began compiling node seed.wealth_overlay.sample_accounts
+[0m22:08:51.884263 [debug] [Thread-2 (]: Began executing node seed.wealth_overlay.sample_accounts
+[0m22:08:51.885776 [debug] [Thread-2 (]: Finished running node seed.wealth_overlay.sample_accounts
+[0m22:08:51.887189 [debug] [Thread-1 (]: Began executing node model.wealth_overlay.stg_transactions
+[0m22:08:51.888713 [debug] [Thread-1 (]: Finished running node model.wealth_overlay.stg_transactions
+[0m22:08:51.890585 [debug] [Thread-3 (]: Began running node model.wealth_overlay.int_transaction_overlay
+[0m22:08:51.891636 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.wealth_overlay.int_transaction_overlay'
+[0m22:08:51.892419 [debug] [Thread-3 (]: Began compiling node model.wealth_overlay.int_transaction_overlay
+[0m22:08:51.897332 [debug] [Thread-3 (]: Writing injected SQL for node "model.wealth_overlay.int_transaction_overlay"
+[0m22:08:51.898804 [debug] [Thread-3 (]: Began executing node model.wealth_overlay.int_transaction_overlay
+[0m22:08:51.900669 [debug] [Thread-3 (]: Finished running node model.wealth_overlay.int_transaction_overlay
+[0m22:08:51.902435 [debug] [Thread-4 (]: Began running node model.wealth_overlay.wealth_edit_overlay
+[0m22:08:51.903799 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.wealth_overlay.wealth_edit_overlay'
+[0m22:08:51.904688 [debug] [Thread-4 (]: Began compiling node model.wealth_overlay.wealth_edit_overlay
+[0m22:08:51.914798 [debug] [Thread-4 (]: Writing injected SQL for node "model.wealth_overlay.wealth_edit_overlay"
+[0m22:08:51.917971 [debug] [Thread-4 (]: Began executing node model.wealth_overlay.wealth_edit_overlay
+[0m22:08:51.920951 [debug] [Thread-4 (]: Finished running node model.wealth_overlay.wealth_edit_overlay
+[0m22:08:51.924236 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:08:51.925547 [debug] [MainThread]: Connection 'list_overlay_db_overlay_schema' was left open.
+[0m22:08:51.927016 [debug] [MainThread]: On list_overlay_db_overlay_schema: Close
+[0m22:08:52.070493 [debug] [MainThread]: Connection 'model.wealth_overlay.stg_transactions' was properly closed.
+[0m22:08:52.071447 [debug] [MainThread]: Connection 'seed.wealth_overlay.sample_accounts' was properly closed.
+[0m22:08:52.072134 [debug] [MainThread]: Connection 'model.wealth_overlay.int_transaction_overlay' was properly closed.
+[0m22:08:52.072826 [debug] [MainThread]: Connection 'model.wealth_overlay.wealth_edit_overlay' was properly closed.
+[0m22:08:52.075548 [debug] [MainThread]: Command end result
+[0m22:08:52.122657 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:08:52.126926 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:08:52.137350 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\DBT\wealth_edit_overlay_sample\target\run_results.json
+[0m22:08:52.138398 [debug] [MainThread]: Command `dbt compile` succeeded at 22:08:52.138247 after 3.47 seconds
+[0m22:08:52.138850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002172C7C2ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002172F4EB070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002172F4EB120>]}
+[0m22:08:52.139287 [debug] [MainThread]: Flushing usage events
+[0m22:08:53.225706 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:09:05.116235 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB80FFB60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABA4C3D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABA4C39D0>]}
+
+
+============================== 22:09:05.133767 | 9c05a826-3fd4-48f5-8381-9d2ca884a6c1 ==============================
+[0m22:09:05.133767 [info ] [MainThread]: Running with dbt=1.10.4
+[0m22:09:05.136756 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m22:09:05.996111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9c05a826-3fd4-48f5-8381-9d2ca884a6c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB8807A80>]}
+[0m22:09:06.060792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9c05a826-3fd4-48f5-8381-9d2ca884a6c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABB45D150>]}
+[0m22:09:06.062427 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:09:06.425246 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m22:09:06.628915 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:09:06.629267 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:09:06.634479 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wealth_edit_overlay_sample.overlay
+- models.wealth_edit_overlay_sample.intermediate
+- models.wealth_edit_overlay_sample.staging
+[0m22:09:06.682973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9c05a826-3fd4-48f5-8381-9d2ca884a6c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABB8B0850>]}
+[0m22:09:06.766136 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:09:06.768705 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:09:06.819055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9c05a826-3fd4-48f5-8381-9d2ca884a6c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB9376120>]}
+[0m22:09:06.819878 [info ] [MainThread]: Found 1 seed, 3 models, 1 source, 477 macros
+[0m22:09:06.820850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9c05a826-3fd4-48f5-8381-9d2ca884a6c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABB52E6D0>]}
+[0m22:09:06.824060 [info ] [MainThread]: 
+[0m22:09:06.825255 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:09:06.826287 [info ] [MainThread]: 
+[0m22:09:06.827836 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:09:06.837163 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db'
+[0m22:09:06.973088 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db"
+[0m22:09:06.973520 [debug] [ThreadPool]: On list_overlay_db: show terse schemas in database overlay_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db"} */
+[0m22:09:06.973870 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:09:07.694058 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.720 seconds
+[0m22:09:07.704535 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db_overlay_schema'
+[0m22:09:07.738530 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db_overlay_schema"
+[0m22:09:07.739022 [debug] [ThreadPool]: On list_overlay_db_overlay_schema: show objects in overlay_db.overlay_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db_overlay_schema"} */;
+[0m22:09:07.739448 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:09:08.395821 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.656 seconds
+[0m22:09:08.404983 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9c05a826-3fd4-48f5-8381-9d2ca884a6c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABBDBFEE0>]}
+[0m22:09:08.423178 [debug] [Thread-1 (]: Began running node model.wealth_overlay.stg_transactions
+[0m22:09:08.425291 [info ] [Thread-1 (]: 1 of 3 START sql view model overlay_schema.stg_transactions .................... [RUN]
+[0m22:09:08.428400 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.wealth_overlay.stg_transactions'
+[0m22:09:08.430058 [debug] [Thread-1 (]: Began compiling node model.wealth_overlay.stg_transactions
+[0m22:09:08.453860 [debug] [Thread-1 (]: Writing injected SQL for node "model.wealth_overlay.stg_transactions"
+[0m22:09:08.455407 [debug] [Thread-1 (]: Began executing node model.wealth_overlay.stg_transactions
+[0m22:09:08.503673 [debug] [Thread-1 (]: Writing runtime sql for node "model.wealth_overlay.stg_transactions"
+[0m22:09:08.505030 [debug] [Thread-1 (]: Using snowflake connection "model.wealth_overlay.stg_transactions"
+[0m22:09:08.505641 [debug] [Thread-1 (]: On model.wealth_overlay.stg_transactions: create or replace   view overlay_db.overlay_schema.stg_transactions
+  
+  
+  
+  
+  as (
+    
+
+SELECT 
+    transaction_id,
+    account_id,
+    transaction_amount,
+    transaction_type,
+    transaction_date
+FROM overlay_db.raw_data.transactions
+  )
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "node_id": "model.wealth_overlay.stg_transactions"} */;
+[0m22:09:08.506063 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:09:09.106160 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.600 seconds
+[0m22:09:09.176361 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c05a826-3fd4-48f5-8381-9d2ca884a6c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABBEF9F10>]}
+[0m22:09:09.177631 [info ] [Thread-1 (]: 1 of 3 OK created sql view model overlay_schema.stg_transactions ............... [[32mSUCCESS 1[0m in 0.75s]
+[0m22:09:09.179304 [debug] [Thread-1 (]: Finished running node model.wealth_overlay.stg_transactions
+[0m22:09:09.180656 [debug] [Thread-2 (]: Began running node model.wealth_overlay.int_transaction_overlay
+[0m22:09:09.181471 [info ] [Thread-2 (]: 2 of 3 START sql view model overlay_schema.int_transaction_overlay ............. [RUN]
+[0m22:09:09.182781 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.wealth_overlay.int_transaction_overlay'
+[0m22:09:09.183333 [debug] [Thread-2 (]: Began compiling node model.wealth_overlay.int_transaction_overlay
+[0m22:09:09.189645 [debug] [Thread-2 (]: Writing injected SQL for node "model.wealth_overlay.int_transaction_overlay"
+[0m22:09:09.190852 [debug] [Thread-2 (]: Began executing node model.wealth_overlay.int_transaction_overlay
+[0m22:09:09.194089 [debug] [Thread-2 (]: Writing runtime sql for node "model.wealth_overlay.int_transaction_overlay"
+[0m22:09:09.196289 [debug] [Thread-2 (]: Using snowflake connection "model.wealth_overlay.int_transaction_overlay"
+[0m22:09:09.197015 [debug] [Thread-2 (]: On model.wealth_overlay.int_transaction_overlay: create or replace   view overlay_db.overlay_schema.int_transaction_overlay
+  
+  
+  
+  
+  as (
+    
+
+select
+    transaction_id,
+    account_id,
+    transaction_amount,
+    transaction_date,
+    case when transaction_amount > 100000 then 'HIGH_VALUE' else 'NORMAL' end as transaction_type
+from overlay_db.overlay_schema.stg_transactions
+  )
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "node_id": "model.wealth_overlay.int_transaction_overlay"} */;
+[0m22:09:09.197601 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:09:09.856599 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.659 seconds
+[0m22:09:09.864172 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c05a826-3fd4-48f5-8381-9d2ca884a6c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABBF4E6D0>]}
+[0m22:09:09.867058 [info ] [Thread-2 (]: 2 of 3 OK created sql view model overlay_schema.int_transaction_overlay ........ [[32mSUCCESS 1[0m in 0.68s]
+[0m22:09:09.871029 [debug] [Thread-2 (]: Finished running node model.wealth_overlay.int_transaction_overlay
+[0m22:09:09.874268 [debug] [Thread-3 (]: Began running node model.wealth_overlay.wealth_edit_overlay
+[0m22:09:09.876795 [info ] [Thread-3 (]: 3 of 3 START sql table model overlay_schema.wealth_edit_overlay ................ [RUN]
+[0m22:09:09.879810 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.wealth_overlay.wealth_edit_overlay'
+[0m22:09:09.881482 [debug] [Thread-3 (]: Began compiling node model.wealth_overlay.wealth_edit_overlay
+[0m22:09:09.895859 [debug] [Thread-3 (]: Writing injected SQL for node "model.wealth_overlay.wealth_edit_overlay"
+[0m22:09:09.898730 [debug] [Thread-3 (]: Began executing node model.wealth_overlay.wealth_edit_overlay
+[0m22:09:09.968105 [debug] [Thread-3 (]: Writing runtime sql for node "model.wealth_overlay.wealth_edit_overlay"
+[0m22:09:09.970508 [debug] [Thread-3 (]: Using snowflake connection "model.wealth_overlay.wealth_edit_overlay"
+[0m22:09:09.971190 [debug] [Thread-3 (]: On model.wealth_overlay.wealth_edit_overlay: create or replace transient table overlay_db.overlay_schema.wealth_edit_overlay
+    
+    
+    
+    as (
+
+select
+    account_id,
+    count(transaction_id) as total_transactions,
+    sum(transaction_amount) as total_amount,
+    max(transaction_date) as last_transaction_date
+from overlay_db.overlay_schema.int_transaction_overlay
+group by account_id
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "node_id": "model.wealth_overlay.wealth_edit_overlay"} */;
+[0m22:09:09.971785 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:09:11.265697 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.293 seconds
+[0m22:09:11.272744 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c05a826-3fd4-48f5-8381-9d2ca884a6c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABBFC7B10>]}
+[0m22:09:11.275157 [info ] [Thread-3 (]: 3 of 3 OK created sql table model overlay_schema.wealth_edit_overlay ........... [[32mSUCCESS 1[0m in 1.39s]
+[0m22:09:11.278853 [debug] [Thread-3 (]: Finished running node model.wealth_overlay.wealth_edit_overlay
+[0m22:09:11.284463 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:09:11.285804 [debug] [MainThread]: Connection 'list_overlay_db' was left open.
+[0m22:09:11.287118 [debug] [MainThread]: On list_overlay_db: Close
+[0m22:09:11.420636 [debug] [MainThread]: Connection 'list_overlay_db_overlay_schema' was left open.
+[0m22:09:11.422091 [debug] [MainThread]: On list_overlay_db_overlay_schema: Close
+[0m22:09:11.592972 [debug] [MainThread]: Connection 'model.wealth_overlay.stg_transactions' was left open.
+[0m22:09:11.594473 [debug] [MainThread]: On model.wealth_overlay.stg_transactions: Close
+[0m22:09:11.794761 [debug] [MainThread]: Connection 'model.wealth_overlay.int_transaction_overlay' was left open.
+[0m22:09:11.796277 [debug] [MainThread]: On model.wealth_overlay.int_transaction_overlay: Close
+[0m22:09:11.947809 [debug] [MainThread]: Connection 'model.wealth_overlay.wealth_edit_overlay' was left open.
+[0m22:09:11.949327 [debug] [MainThread]: On model.wealth_overlay.wealth_edit_overlay: Close
+[0m22:09:12.094492 [info ] [MainThread]: 
+[0m22:09:12.097228 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 5.27 seconds (5.27s).
+[0m22:09:12.103083 [debug] [MainThread]: Command end result
+[0m22:09:12.171955 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:09:12.178830 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:09:12.193084 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\DBT\wealth_edit_overlay_sample\target\run_results.json
+[0m22:09:12.194075 [info ] [MainThread]: 
+[0m22:09:12.195642 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:09:12.197443 [info ] [MainThread]: 
+[0m22:09:12.198829 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m22:09:12.201462 [debug] [MainThread]: Command `dbt run` succeeded at 22:09:12.201150 after 7.28 seconds
+[0m22:09:12.202403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABB897C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB87D7E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABA4ED2B0>]}
+[0m22:09:12.203390 [debug] [MainThread]: Flushing usage events
+[0m22:09:13.433789 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:25:32.600432 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221EEBDFB60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221EFFE3D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221EFFE39D0>]}
+
+
+============================== 22:25:32.614400 | 073040af-38b9-4c1f-afca-f966a1be448d ==============================
+[0m22:25:32.614400 [info ] [MainThread]: Running with dbt=1.10.4
+[0m22:25:32.616882 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m22:25:33.469012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '073040af-38b9-4c1f-afca-f966a1be448d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221EF2F7A80>]}
+[0m22:25:33.530562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '073040af-38b9-4c1f-afca-f966a1be448d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F1EE1150>]}
+[0m22:25:33.532144 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:25:33.879056 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m22:25:34.062757 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m22:25:34.063609 [debug] [MainThread]: Partial parsing: added file: wealth_overlay://models\staging\test.sql
+[0m22:25:34.320238 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wealth_edit_overlay_sample.staging
+- models.wealth_edit_overlay_sample.overlay
+- models.wealth_edit_overlay_sample.intermediate
+[0m22:25:34.335302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '073040af-38b9-4c1f-afca-f966a1be448d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F2331D50>]}
+[0m22:25:34.420483 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:25:34.422906 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:25:34.463841 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '073040af-38b9-4c1f-afca-f966a1be448d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221EFE66120>]}
+[0m22:25:34.464530 [info ] [MainThread]: Found 1 seed, 4 models, 1 source, 477 macros
+[0m22:25:34.465806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '073040af-38b9-4c1f-afca-f966a1be448d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F2512CF0>]}
+[0m22:25:34.472782 [info ] [MainThread]: 
+[0m22:25:34.474674 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:25:34.477431 [info ] [MainThread]: 
+[0m22:25:34.481270 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:25:34.504420 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db'
+[0m22:25:34.650455 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db"
+[0m22:25:34.651153 [debug] [ThreadPool]: On list_overlay_db: show terse schemas in database overlay_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db"} */
+[0m22:25:34.651708 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:25:35.490101 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.838 seconds
+[0m22:25:35.501033 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db_overlay_schema'
+[0m22:25:35.550118 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db_overlay_schema"
+[0m22:25:35.551452 [debug] [ThreadPool]: On list_overlay_db_overlay_schema: show objects in overlay_db.overlay_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db_overlay_schema"} */;
+[0m22:25:35.552582 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:25:36.101235 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.548 seconds
+[0m22:25:36.112051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '073040af-38b9-4c1f-afca-f966a1be448d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F24FA9C0>]}
+[0m22:25:36.131615 [debug] [Thread-2 (]: Began running node model.wealth_overlay.test
+[0m22:25:36.133511 [debug] [Thread-1 (]: Began running node model.wealth_overlay.stg_transactions
+[0m22:25:36.135926 [info ] [Thread-2 (]: 2 of 4 START sql view model overlay_schema.test ................................ [RUN]
+[0m22:25:36.142477 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.wealth_overlay.test'
+[0m22:25:36.144062 [debug] [Thread-2 (]: Began compiling node model.wealth_overlay.test
+[0m22:25:36.139100 [info ] [Thread-1 (]: 1 of 4 START sql view model overlay_schema.stg_transactions .................... [RUN]
+[0m22:25:36.174477 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.wealth_overlay.stg_transactions'
+[0m22:25:36.178178 [debug] [Thread-2 (]: Writing injected SQL for node "model.wealth_overlay.test"
+[0m22:25:36.179715 [debug] [Thread-1 (]: Began compiling node model.wealth_overlay.stg_transactions
+[0m22:25:36.189462 [debug] [Thread-1 (]: Writing injected SQL for node "model.wealth_overlay.stg_transactions"
+[0m22:25:36.191342 [debug] [Thread-2 (]: Began executing node model.wealth_overlay.test
+[0m22:25:36.233654 [debug] [Thread-1 (]: Began executing node model.wealth_overlay.stg_transactions
+[0m22:25:36.362022 [debug] [Thread-2 (]: Writing runtime sql for node "model.wealth_overlay.test"
+[0m22:25:36.367485 [debug] [Thread-1 (]: Writing runtime sql for node "model.wealth_overlay.stg_transactions"
+[0m22:25:36.370498 [debug] [Thread-1 (]: Using snowflake connection "model.wealth_overlay.stg_transactions"
+[0m22:25:36.371639 [debug] [Thread-1 (]: On model.wealth_overlay.stg_transactions: create or replace   view overlay_db.overlay_schema.stg_transactions
+  
+  
+  
+  
+  as (
+    
+
+SELECT 
+    transaction_id,
+    account_id,
+    transaction_amount,
+    transaction_type,
+    transaction_date
+FROM overlay_db.raw_data.transactions
+  )
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "node_id": "model.wealth_overlay.stg_transactions"} */;
+[0m22:25:36.372862 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:25:36.374962 [debug] [Thread-2 (]: Using snowflake connection "model.wealth_overlay.test"
+[0m22:25:36.376070 [debug] [Thread-2 (]: On model.wealth_overlay.test: create or replace   view overlay_db.overlay_schema.test
+  
+  
+  
+  
+  as (
+    select 1 as id
+  )
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "node_id": "model.wealth_overlay.test"} */;
+[0m22:25:36.376898 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:25:37.195774 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.823 seconds
+[0m22:25:37.266136 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.889 seconds
+[0m22:25:37.270916 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '073040af-38b9-4c1f-afca-f966a1be448d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F2A1B1D0>]}
+[0m22:25:37.272922 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '073040af-38b9-4c1f-afca-f966a1be448d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F2A5B8B0>]}
+[0m22:25:37.272192 [info ] [Thread-1 (]: 1 of 4 OK created sql view model overlay_schema.stg_transactions ............... [[32mSUCCESS 1[0m in 1.09s]
+[0m22:25:37.275568 [debug] [Thread-1 (]: Finished running node model.wealth_overlay.stg_transactions
+[0m22:25:37.277009 [debug] [Thread-3 (]: Began running node model.wealth_overlay.int_transaction_overlay
+[0m22:25:37.274102 [info ] [Thread-2 (]: 2 of 4 OK created sql view model overlay_schema.test ........................... [[32mSUCCESS 1[0m in 1.13s]
+[0m22:25:37.279438 [debug] [Thread-2 (]: Finished running node model.wealth_overlay.test
+[0m22:25:37.278003 [info ] [Thread-3 (]: 3 of 4 START sql view model overlay_schema.int_transaction_overlay ............. [RUN]
+[0m22:25:37.281364 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.wealth_overlay.int_transaction_overlay'
+[0m22:25:37.282127 [debug] [Thread-3 (]: Began compiling node model.wealth_overlay.int_transaction_overlay
+[0m22:25:37.289411 [debug] [Thread-3 (]: Writing injected SQL for node "model.wealth_overlay.int_transaction_overlay"
+[0m22:25:37.290814 [debug] [Thread-3 (]: Began executing node model.wealth_overlay.int_transaction_overlay
+[0m22:25:37.295200 [debug] [Thread-3 (]: Writing runtime sql for node "model.wealth_overlay.int_transaction_overlay"
+[0m22:25:37.297251 [debug] [Thread-3 (]: Using snowflake connection "model.wealth_overlay.int_transaction_overlay"
+[0m22:25:37.298148 [debug] [Thread-3 (]: On model.wealth_overlay.int_transaction_overlay: create or replace   view overlay_db.overlay_schema.int_transaction_overlay
+  
+  
+  
+  
+  as (
+    
+
+select
+    transaction_id,
+    account_id,
+    transaction_amount,
+    transaction_date,
+    case when transaction_amount > 100000 then 'HIGH_VALUE' else 'NORMAL' end as transaction_type
+from overlay_db.overlay_schema.stg_transactions
+  )
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "node_id": "model.wealth_overlay.int_transaction_overlay"} */;
+[0m22:25:37.298919 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:25:38.106520 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.807 seconds
+[0m22:25:38.114261 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '073040af-38b9-4c1f-afca-f966a1be448d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F2C58870>]}
+[0m22:25:38.116730 [info ] [Thread-3 (]: 3 of 4 OK created sql view model overlay_schema.int_transaction_overlay ........ [[32mSUCCESS 1[0m in 0.83s]
+[0m22:25:38.120722 [debug] [Thread-3 (]: Finished running node model.wealth_overlay.int_transaction_overlay
+[0m22:25:38.123512 [debug] [Thread-4 (]: Began running node model.wealth_overlay.wealth_edit_overlay
+[0m22:25:38.125799 [info ] [Thread-4 (]: 4 of 4 START sql table model overlay_schema.wealth_edit_overlay ................ [RUN]
+[0m22:25:38.129118 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.wealth_overlay.wealth_edit_overlay'
+[0m22:25:38.131422 [debug] [Thread-4 (]: Began compiling node model.wealth_overlay.wealth_edit_overlay
+[0m22:25:38.148098 [debug] [Thread-4 (]: Writing injected SQL for node "model.wealth_overlay.wealth_edit_overlay"
+[0m22:25:38.150968 [debug] [Thread-4 (]: Began executing node model.wealth_overlay.wealth_edit_overlay
+[0m22:25:38.225003 [debug] [Thread-4 (]: Writing runtime sql for node "model.wealth_overlay.wealth_edit_overlay"
+[0m22:25:38.228098 [debug] [Thread-4 (]: Using snowflake connection "model.wealth_overlay.wealth_edit_overlay"
+[0m22:25:38.228888 [debug] [Thread-4 (]: On model.wealth_overlay.wealth_edit_overlay: create or replace transient table overlay_db.overlay_schema.wealth_edit_overlay
+    
+    
+    
+    as (
+
+select
+    account_id,
+    count(transaction_id) as total_transactions,
+    sum(transaction_amount) as total_amount,
+    max(transaction_date) as last_transaction_date
+from overlay_db.overlay_schema.int_transaction_overlay
+group by account_id
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "node_id": "model.wealth_overlay.wealth_edit_overlay"} */;
+[0m22:25:38.229462 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:25:40.046556 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.817 seconds
+[0m22:25:40.053904 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '073040af-38b9-4c1f-afca-f966a1be448d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F2B084D0>]}
+[0m22:25:40.056285 [info ] [Thread-4 (]: 4 of 4 OK created sql table model overlay_schema.wealth_edit_overlay ........... [[32mSUCCESS 1[0m in 1.93s]
+[0m22:25:40.059919 [debug] [Thread-4 (]: Finished running node model.wealth_overlay.wealth_edit_overlay
+[0m22:25:40.065981 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:25:40.067316 [debug] [MainThread]: Connection 'list_overlay_db' was left open.
+[0m22:25:40.068644 [debug] [MainThread]: On list_overlay_db: Close
+[0m22:25:40.196917 [debug] [MainThread]: Connection 'list_overlay_db_overlay_schema' was left open.
+[0m22:25:40.198397 [debug] [MainThread]: On list_overlay_db_overlay_schema: Close
+[0m22:25:40.390400 [debug] [MainThread]: Connection 'model.wealth_overlay.test' was left open.
+[0m22:25:40.391899 [debug] [MainThread]: On model.wealth_overlay.test: Close
+[0m22:25:40.533921 [debug] [MainThread]: Connection 'model.wealth_overlay.stg_transactions' was left open.
+[0m22:25:40.535356 [debug] [MainThread]: On model.wealth_overlay.stg_transactions: Close
+[0m22:25:40.714775 [debug] [MainThread]: Connection 'model.wealth_overlay.int_transaction_overlay' was left open.
+[0m22:25:40.716217 [debug] [MainThread]: On model.wealth_overlay.int_transaction_overlay: Close
+[0m22:25:40.871075 [debug] [MainThread]: Connection 'model.wealth_overlay.wealth_edit_overlay' was left open.
+[0m22:25:40.872774 [debug] [MainThread]: On model.wealth_overlay.wealth_edit_overlay: Close
+[0m22:25:41.080686 [info ] [MainThread]: 
+[0m22:25:41.082012 [info ] [MainThread]: Finished running 1 table model, 3 view models in 0 hours 0 minutes and 6.60 seconds (6.60s).
+[0m22:25:41.086950 [debug] [MainThread]: Command end result
+[0m22:25:41.136192 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:25:41.143385 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:25:41.158455 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\DBT\wealth_edit_overlay_sample\target\run_results.json
+[0m22:25:41.159340 [info ] [MainThread]: 
+[0m22:25:41.161026 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:25:41.162312 [info ] [MainThread]: 
+[0m22:25:41.163495 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m22:25:41.165457 [debug] [MainThread]: Command `dbt run` succeeded at 22:25:41.165189 after 8.82 seconds
+[0m22:25:41.166184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F00112B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221E98ACBB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221EF288950>]}
+[0m22:25:41.166921 [debug] [MainThread]: Flushing usage events
+[0m22:25:42.411081 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:27:39.431424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002448744FB60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024489833D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000244898339D0>]}
+
+
+============================== 22:27:39.449008 | baa8e825-5cfd-4330-bc68-d97bc69a1d4f ==============================
+[0m22:27:39.449008 [info ] [MainThread]: Running with dbt=1.10.4
+[0m22:27:39.452043 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'D:\\DBT\\wealth_edit_overlay_sample\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Nivas Seenivasan\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run --select test', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:27:40.481883 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'baa8e825-5cfd-4330-bc68-d97bc69a1d4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024487B77A80>]}
+[0m22:27:40.551153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'baa8e825-5cfd-4330-bc68-d97bc69a1d4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002448A7AD150>]}
+[0m22:27:40.553216 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:27:40.929836 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m22:27:41.131762 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:27:41.132149 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:27:41.139152 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.wealth_edit_overlay_sample.intermediate
+- models.wealth_edit_overlay_sample.overlay
+- models.wealth_edit_overlay_sample.staging
+[0m22:27:41.219115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'baa8e825-5cfd-4330-bc68-d97bc69a1d4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002448AC00A50>]}
+[0m22:27:41.306616 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:27:41.309178 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:27:41.367573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'baa8e825-5cfd-4330-bc68-d97bc69a1d4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000244886E6120>]}
+[0m22:27:41.369402 [info ] [MainThread]: Found 1 seed, 4 models, 1 source, 477 macros
+[0m22:27:41.372112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'baa8e825-5cfd-4330-bc68-d97bc69a1d4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002448A87DFD0>]}
+[0m22:27:41.379260 [info ] [MainThread]: 
+[0m22:27:41.382035 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:27:41.385102 [info ] [MainThread]: 
+[0m22:27:41.391406 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:27:41.397042 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db'
+[0m22:27:41.577391 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db"
+[0m22:27:41.577795 [debug] [ThreadPool]: On list_overlay_db: show terse schemas in database overlay_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db"} */
+[0m22:27:41.578104 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:27:42.451422 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.873 seconds
+[0m22:27:42.479260 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_overlay_db_overlay_schema'
+[0m22:27:42.533924 [debug] [ThreadPool]: Using snowflake connection "list_overlay_db_overlay_schema"
+[0m22:27:42.535663 [debug] [ThreadPool]: On list_overlay_db_overlay_schema: show objects in overlay_db.overlay_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "connection_name": "list_overlay_db_overlay_schema"} */;
+[0m22:27:42.537144 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:27:43.148106 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.611 seconds
+[0m22:27:43.159668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'baa8e825-5cfd-4330-bc68-d97bc69a1d4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002448A6A5E60>]}
+[0m22:27:43.177704 [debug] [Thread-1 (]: Began running node model.wealth_overlay.test
+[0m22:27:43.179794 [info ] [Thread-1 (]: 1 of 1 START sql view model overlay_schema.test ................................ [RUN]
+[0m22:27:43.182835 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.wealth_overlay.test'
+[0m22:27:43.184522 [debug] [Thread-1 (]: Began compiling node model.wealth_overlay.test
+[0m22:27:43.204720 [debug] [Thread-1 (]: Writing injected SQL for node "model.wealth_overlay.test"
+[0m22:27:43.206331 [debug] [Thread-1 (]: Began executing node model.wealth_overlay.test
+[0m22:27:43.252507 [debug] [Thread-1 (]: Writing runtime sql for node "model.wealth_overlay.test"
+[0m22:27:43.253742 [debug] [Thread-1 (]: Using snowflake connection "model.wealth_overlay.test"
+[0m22:27:43.254230 [debug] [Thread-1 (]: On model.wealth_overlay.test: create or replace   view overlay_db.overlay_schema.test
+  
+  
+  
+  
+  as (
+    select 1 as id
+  )
+/* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "wealth_overlay", "target_name": "dev", "node_id": "model.wealth_overlay.test"} */;
+[0m22:27:43.254705 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:27:43.817934 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.563 seconds
+[0m22:27:43.897284 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'baa8e825-5cfd-4330-bc68-d97bc69a1d4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002448B249CD0>]}
+[0m22:27:43.898256 [info ] [Thread-1 (]: 1 of 1 OK created sql view model overlay_schema.test ........................... [[32mSUCCESS 1[0m in 0.71s]
+[0m22:27:43.899897 [debug] [Thread-1 (]: Finished running node model.wealth_overlay.test
+[0m22:27:43.902451 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:27:43.903089 [debug] [MainThread]: Connection 'list_overlay_db' was left open.
+[0m22:27:43.903703 [debug] [MainThread]: On list_overlay_db: Close
+[0m22:27:44.043880 [debug] [MainThread]: Connection 'list_overlay_db_overlay_schema' was left open.
+[0m22:27:44.045547 [debug] [MainThread]: On list_overlay_db_overlay_schema: Close
+[0m22:27:44.187272 [debug] [MainThread]: Connection 'model.wealth_overlay.test' was left open.
+[0m22:27:44.188736 [debug] [MainThread]: On model.wealth_overlay.test: Close
+[0m22:27:44.337644 [info ] [MainThread]: 
+[0m22:27:44.340391 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.95 seconds (2.95s).
+[0m22:27:44.345192 [debug] [MainThread]: Command end result
+[0m22:27:44.412292 [debug] [MainThread]: Wrote artifact WritableManifest to D:\DBT\wealth_edit_overlay_sample\target\manifest.json
+[0m22:27:44.415749 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\DBT\wealth_edit_overlay_sample\target\semantic_manifest.json
+[0m22:27:44.423586 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\DBT\wealth_edit_overlay_sample\target\run_results.json
+[0m22:27:44.423999 [info ] [MainThread]: 
+[0m22:27:44.425029 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:27:44.425722 [info ] [MainThread]: 
+[0m22:27:44.426539 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m22:27:44.428191 [debug] [MainThread]: Command `dbt run` succeeded at 22:27:44.427994 after 5.40 seconds
+[0m22:27:44.428937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002448ABF03C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002448B27FD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002448B27FBB0>]}
+[0m22:27:44.429550 [debug] [MainThread]: Flushing usage events
+[0m22:27:45.694559 [debug] [MainThread]: An error was encountered while trying to flush usage events
